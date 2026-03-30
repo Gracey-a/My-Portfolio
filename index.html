@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agho Ivie Gracious — Developer Portfolio</title>
+        <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+                <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+                <script src="/_sdk/element_sdk.js"></script>
+                <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+                <script>
+                    tailwind.config = {
+                        theme: {
+                            extend: {
+                                colors: {
+                                    darkbg: '#0a0608',
+                                    darkcard: '#12090f',
+                                    accent: '#9b7ba8',
+                                    accentalt: '#c9a8d8',
+                                    text: '#d4c5e2',
+                                    textdim: '#a892b8',
+                                    cyberpink: '#9b7ba8'
+                                }
+                            }
+                        }
+                    }
+                </script>
+                <style>
+                    html { scroll-behavior: smooth; }
+                    
+                    .font-display { font-family: 'Space Mono', monospace; }
+                    .font-code { font-family: 'JetBrains Mono', monospace; }
+                    .font-body { font-family: 'Poppins', sans-serif; }
+                    
+                    .anim-fade-up { opacity: 1; }
+                    .anim-fade-in { opacity: 1; }
+                    .anim-slide-left { opacity: 1; }
+                    .anim-slide-right { opacity: 1; }
+                    .anim-scale-in { opacity: 1; }
+                    .anim-glow { }
+                    .anim-float { }
+                    
+                    .delay-1 { }
+                    .delay-2 { }
+                    .delay-3 { }
+                    .delay-4 { }
+                    .delay-5 { }
+                    .delay-6 { }
+                    .delay-7 { }
+                    
+                    .observe-anim { opacity: 1; }
+                    .observe-anim.visible { opacity: 1; }
+                    
+                    /* Glow effects */
+                    .glow-accent {
+                        box-shadow: 0 0 20px #9b7ba811;
+                    }
+
+                    .glow-accent:hover {
+                        box-shadow: 0 0 30px #9b7ba822;
+                    }
+
+                    .glow-border {
+                        border: 1px solid #9b7ba844;
+                    }
+
+                    .code-border {
+                        border: 1px solid #9b7ba844;
+                    }
+                    
+                    /* Scrollbar */
+                    ::-webkit-scrollbar { width: 8px; }
+                    ::-webkit-scrollbar-track { background: #0a0e27; }
+                    ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 4px; }
+                    ::-webkit-scrollbar-thumb:hover { background: #00d4ff; }
+                    
+                    /* Image placeholder */
+                    .hero-image-placeholder {
+                        background: radial-gradient(circle, #1a0f1f 0%, #0a0608 100%);
+                        position: relative;
+                        border: 1px solid #9b7ba8;
+                        overflow: hidden;
+                        border-radius: 0;
+                        width: 100%;
+                        max-width: 320px;
+                        height: 280px;
+                        box-shadow: 0 0 20px #9b7ba811;
+                    }
+                    .hero-image-placeholder::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: radial-gradient(circle at 30% 30%, #9b7ba811, transparent 60%);
+                    }
+                    .hero-image-placeholder::after {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        border: 1px solid #9b7ba822;
+                    }
+                    @keyframes spin {
+                        from { transform: rotate(0deg); }
+                        to { transform: rotate(360deg); }
+                    }
+
+                    .about-image-placeholder {
+                        background: radial-gradient(circle, #1a0f1f 0%, #0a0608 100%);
+                        position: relative;
+                        border: 1px solid #9b7ba8;
+                        border-radius: 50%;
+                        width: 160px;
+                        height: 160px;    
+                        box-shadow: 0 0 20px #9b7ba811;
+                    }
+                    .about-image-placeholder::after {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 50%;
+                        border: 1px solid #9b7ba822;
+                    }
+
+                    /* Project card hover */
+                    .project-card {
+                        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                        border: 1px solid #9b7ba833;
+                        background: linear-gradient(135deg, #1a0f1f22, #9b7ba808);
+                    }
+                    .project-card:hover {
+                        transform: translateY(-10px);
+                        border-color: #9b7ba855;
+                        box-shadow: 0 25px 70px #9b7ba811;
+                        background: linear-gradient(135deg, #1a0f1f44, #9b7ba816);
+                    }
+
+                    /* Skill tag */
+                    .skill-tag {
+                        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                        border: 1.5px solid #9b7ba855;
+                        background: linear-gradient(135deg, #1a0f1f11, #9b7ba808);
+                    }
+                    .skill-tag:hover {
+                        background: linear-gradient(135deg, #9b7ba822, #9b7ba816);
+                        border-color: #9b7ba8;
+                        box-shadow: 0 0 15px #9b7ba822;
+                        transform: translateY(-4px) scale(1.05);
+                    }
+
+                    /* Fun fact card */
+                    .fun-card {
+                        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                        border: 1px solid #9b7ba833;
+                        background: linear-gradient(135deg, #1a0f1f33, #9b7ba808);
+                    }
+    .fun-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      border-color: #9b7ba855;
+      box-shadow: 0 20px 50px #9b7ba811;
+      background: linear-gradient(135deg, #1a0f1f55, #9b7ba816);
+    }
+
+    /* Contact form input */
+    .contact-input {
+      transition: all 0.3s ease;
+      border: 1px solid #9b7ba844;
+      background: #0a0608;
+      color: #d4c5e2;
+    }
+    .contact-input:focus {
+      border-color: #9b7ba8;
+      box-shadow: 0 0 15px #9b7ba811;
+      background: #12090f;
+    }
+
+    /* Nav */
+    .nav-blur {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid #9b7ba833;
+      background: #0a0608cc;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #9b7ba8, #9b7ba8);
+      transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Button styles */
+    .btn-primary {
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border: 1px solid #9b7ba8;
+      background: linear-gradient(135deg, #9b7ba8 0%, #8b6b98 100%);
+    }
+    .btn-primary:hover {
+      border-color: #b399c1;
+      box-shadow: 0 0 20px #9b7ba822;
+      transform: translateY(-2px);
+    }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      transition: all 0.3s ease;
+      border: 1px solid #9b7ba844;
+      background: transparent;
+    }
+    .btn-secondary:hover {
+      border-color: #9b7ba8;
+      background: #9b7ba811;
+      box-shadow: 0 0 15px #9b7ba816;
+    }
+
+    /* Code snippet style */
+    .code-snippet {
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(135deg, #0a0608 0%, #12090f 100%);
+      border: 1px solid #9b7ba844;
+      overflow: hidden;
+    }
+
+    /* Pattern overlay */
+    .pattern-grid {
+      background-image: 
+        linear-gradient(#9b7ba80a 1px, transparent 1px),
+        linear-gradient(90deg, #9b7ba80a 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    
+    body { box-sizing: border-box; }
+</style>
+<script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="h-full font-body bg-darkbg text-text">
+    <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- NAVIGATION -->
+        <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-blur">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="#hero" class="font-display text-2xl font-bold tracking-widest text-accent anim-glow" id="nav-brand">&lt;A.I.G /&gt;</a> <button id="mobile-toggle" class="md:hidden text-text" aria-label="Toggle menu"> <i data-lucide="menu" class="w-6 h-6"></i> </button>
+                <div id="nav-links" class="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest uppercase">
+                    <a href="#hero" class="nav-link text-text hover:text-accent">Home</a> <a href="#about" class="nav-link text-text hover:text-accent">About</a> <a href="#projects" class="nav-link text-text hover:text-accent">Projects</a> <a href="#funfacts" class="nav-link text-text hover:text-accent">Fun Facts</a> <a href="#expertise" class="nav-link text-text hover:text-accent">Expertise</a> <a href="#contact" class="nav-link text-text hover:text-accent">Contact</a>
+                </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-darkbg/95 nav-blur px-6 py-4">
+     <div class="flex flex-col gap-4 text-xs font-medium tracking-widest uppercase">
+      <a href="#hero" class="nav-link text-text hover:text-accent py-2">Home</a> <a href="#about" class="nav-link text-text hover:text-accent py-2">About</a> <a href="#projects" class="nav-link text-text hover:text-accent py-2">Projects</a> <a href="#funfacts" class="nav-link text-text hover:text-accent py-2">Fun Facts</a> <a href="#expertise" class="nav-link text-text hover:text-accent py-2">Expertise</a> <a href="#contact" class="nav-link text-text hover:text-accent py-2">Contact</a>
+     </div>
+    </div>
+   </nav><!-- ==================== SECTION 1: HERO / COVER PAGE ==================== -->
+   <section id="hero" class="relative w-full min-h-full flex items-center bg-darkbg pattern-grid overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-32 md:py-0 w-full">
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="order-2 md:order-1 z-10">
+       <div class="observe-anim anim-fade-up delay-1">
+        <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-6">&gt; web_developer.init()</p>
+       </div>
+       <h1 id="hero-name" class="observe-anim anim-fade-up delay-2 font-display text-5xl md:text-7xl font-bold leading-[1.1] text-text mb-4 anim-glow tracking-wider">Agho Ivie<br>
+         Gracious</h1>
+       <p id="hero-tagline" class="observe-anim anim-fade-up delay-3 text-sm tracking-[0.2em] text-textdim mb-6 font-code">// Web Developer • Creative Thinker • Tech Innovator</p>
+       <p class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed max-w-md mb-8">I design and build modern, responsive websites combining creativity with clean code. Open to remote opportunities and internships.</p>
+       <p id="hero-cta" class="observe-anim anim-fade-up delay-5 font-code text-lg text-accent mb-8 italic">"Let's build something amazing together."</p>
+       <div class="observe-anim anim-fade-up delay-6 flex flex-wrap gap-4">
+        <a href="#contact" class="inline-flex items-center gap-2 btn-primary text-white px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"> <i data-lucide="send" class="w-4 h-4"></i> Let's Connect </a> <a href="#projects" class="inline-flex items-center gap-2 btn-secondary text-accent px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"> <i data-lucide="code-2" class="w-4 h-4"></i> View Work </a>
+       </div>
+      </div><!-- Right Image Placeholder -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end relative">
+       <div class="observe-anim anim-float delay-3 hero-image-placeholder rounded-full shadow-2xl flex items-center justify-center glow-accent">
+        <div class="relative z-10 text-center">
+         <i data-lucide="user" class="w-16 h-16 text-accent/40 mx-auto"></i>
+         <p class="text-accent text-xs tracking-widest uppercase font-code mt-2">Your Face</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 observe-anim anim-fade-in delay-7">
+     <div class="flex flex-col items-center gap-2 text-textdim">
+      <span class="text-[10px] tracking-[0.3em] uppercase">Scroll to explore</span> <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-accent"></i>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 2: ABOUT / INTRO ==================== -->
+   <section id="about" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
+    <div class="max-w-5xl mx-auto px-6">
+     <div class="grid md:grid-cols-3 gap-12 items-start">
+      <!-- Left column: image + name -->
+      <div class="md:col-span-1 flex flex-col items-center md:items-start">
+       <div class="observe-anim anim-scale-in about-image-placeholder flex items-center justify-center mb-6">
+        <i data-lucide="user" class="w-8 h-8 text-accent/50"></i>
+       </div>
+       <p class="observe-anim anim-fade-up delay-1 text-xs font-code tracking-widest text-accent mb-2">&lt;/about&gt;</p>
+       <h2 id="about-heading" class="observe-anim anim-fade-up delay-2 font-display text-4xl md:text-5xl font-bold text-text leading-tight">About Me</h2>
+      </div><!-- Right column: bio -->
+      <div class="md:col-span-2 space-y-5">
+       <p class="observe-anim anim-fade-up delay-2 text-base text-text leading-relaxed">Hi, I'm <span class="font-semibold text-accent">Agho Ivie Gracious</span>, a passionate and detail-oriented web developer with a strong interest in creating visually appealing and functional websites.</p>
+       <p class="observe-anim anim-fade-up delay-3 text-base text-text leading-relaxed">I'm at the early stage of my professional journey, but I've dedicated myself to learning, building, and improving my skills through hands-on projects. I love turning ideas into digital experiences with clean, modern interfaces.</p>
+       <p class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed font-code text-sm">Currently seeking:</p>
+       <ul class="observe-anim anim-fade-up delay-5 space-y-3 pl-1">
+        <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Remote job opportunities</span></li>
+        <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Meaningful internship roles</span></li>
+        <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Growth alongside experienced developers</span></li>
+       </ul>
+       <div class="observe-anim anim-fade-up delay-6 pt-4 border-l-2 border-accent/30 pl-6 code-snippet p-4 rounded-sm">
+        <p class="font-code text-sm text-accent">const philosophy =</p>
+        <p class="font-code text-sm text-textdim italic">"Consistency, creativity,<br>
+          continuous learning"</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 3: PROJECTS CATALOG ==================== -->
+   <section id="projects" class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid">
+    <div class="max-w-5xl mx-auto px-6">
+     <div class="text-center mb-16">
+      <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; projects.map()</p>
+      <h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Projects Catalog</h2>
+      <p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-xl mx-auto">Here are projects I've built while learning and developing my skills. Each reflects my growth and creativity.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project 1 -->
+      <div class="observe-anim anim-fade-up delay-2 project-card rounded-sm p-8">
+       <div class="flex items-center gap-3 mb-4">
+        <i data-lucide="layout" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">Personal Portfolio</h3>
+       </div>
+       <p class="text-sm text-textdim leading-relaxed mb-5">A clean, modern portfolio showcasing skills with elegant typography and smooth interactions.</p>
+       <div class="mb-5">
+        <p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p>
+        <ul class="space-y-1.5">
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Responsive design</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Modern UI/UX</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Smooth animations</li>
+        </ul>
+       </div>
+       <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">HTML</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">CSS</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">JavaScript</span>
+       </div>
+       <div class="flex gap-4"><span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Demo </span> <span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub </span>
+       </div>
+      </div><!-- Project 2 -->
+      <div class="observe-anim anim-fade-up delay-3 project-card rounded-sm p-8">
+       <div class="flex items-center gap-3 mb-4">
+        <i data-lucide="list-todo" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">Task Manager</h3>
+       </div>
+       <p class="text-sm text-textdim leading-relaxed mb-5">Interactive task manager for organizing activities with focus on usability and efficiency.</p>
+       <div class="mb-5">
+        <p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p>
+        <ul class="space-y-1.5">
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Add/edit/delete tasks</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Local storage</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Interactive UI</li>
+        </ul>
+       </div>
+       <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">HTML</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">CSS</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">JavaScript</span>
+       </div>
+       <div class="flex gap-4"><span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Demo </span> <span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub </span>
+       </div>
+      </div><!-- Project 3 -->
+      <div class="observe-anim anim-fade-up delay-4 project-card rounded-sm p-8">
+       <div class="flex items-center gap-3 mb-4">
+        <i data-lucide="shopping-bag" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">E-Commerce Store</h3>
+       </div>
+       <p class="text-sm text-textdim leading-relaxed mb-5">Modern landing page for online store with beautiful layout and optimized user flow.</p>
+       <div class="mb-5">
+        <p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p>
+        <ul class="space-y-1.5">
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Product grid layout</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Visual hierarchy</li>
+         <li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> CTA optimization</li>
+        </ul>
+       </div>
+       <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">HTML</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">CSS</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">React</span>
+       </div>
+       <div class="flex gap-4"><span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Demo </span> <span class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent cursor-pointer hover:text-white transition-colors"> <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub </span>
+       </div>
+      </div><!-- More Projects -->
+      <div class="observe-anim anim-fade-up delay-5 border-2 border-dashed code-border rounded-sm p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
+       <div class="w-12 h-12 bg-accentalt/10 rounded-full flex items-center justify-center mb-4 border border-accentalt/30">
+        <i data-lucide="plus" class="w-6 h-6 text-accentalt"></i>
+       </div>
+       <p class="font-display text-xl font-semibold text-text mb-2">More Coming Soon</p>
+       <p class="text-sm text-textdim">Building new projects<br>
+         Check back soon!</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 4: FUN FACTS ==================== -->
+   <section id="funfacts" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
+    <div class="max-w-5xl mx-auto px-6">
+     <div class="text-center mb-16">
+      <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; personality.traits</p>
+      <h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Fun Facts</h2>
+      <p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto">Get to know me beyond the code — great partnerships start with real connections.</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="observe-anim anim-fade-up delay-1 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        ✨
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I love creating visually aesthetic and well-structured designs</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-2 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        💻
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I enjoy bringing ideas to life through code</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-3 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        🌍
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I dream of working with global teams remotely</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-4 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        📚
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I'm constantly learning and improving</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-5 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        🎯
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I'm very detail-oriented and thorough</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-6 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        🎨
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I have a creative side that influences design</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center">
+       <div class="text-4xl mb-3">
+        ⚡
+       </div>
+       <p class="text-sm text-textdim leading-relaxed">I enjoy solving problems creatively</p>
+      </div>
+      <div class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center flex items-center justify-center glow-border">
+       <p class="font-display italic text-sm text-accent leading-snug">"I don't just build websites — I create experiences."</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 5: EXPERTISE / BONUS ==================== -->
+   <section id="expertise" class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid">
+    <div class="max-w-5xl mx-auto px-6">
+     <div class="text-center mb-16">
+      <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; skills.display()</p>
+      <h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Learning &amp; Expertise</h2>
+     </div>
+     <div class="grid md:grid-cols-3 gap-10">
+      <!-- Where I Learned -->
+      <div class="observe-anim anim-slide-left delay-2 glow-border rounded-sm p-6">
+       <div class="flex items-center gap-3 mb-5">
+        <i data-lucide="graduation-cap" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">Where I Learned</h3>
+       </div>
+       <p class="text-sm text-textdim leading-relaxed mb-4">Completed <span class="text-accent font-semibold">Full Stack Development</span> program at <span class="text-accent font-semibold">Bizmarrow Technologies, Abuja</span> with foundational web development knowledge.</p>
+       <p class="text-sm text-textdim leading-relaxed">Continued learning through independent practice, projects, and online resources.</p>
+      </div><!-- My Expertise -->
+      <div class="observe-anim anim-slide-left delay-3 glow-border rounded-sm p-6">
+       <div class="flex items-center gap-3 mb-5">
+        <i data-lucide="code-2" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">My Expertise</h3>
+       </div>
+       <div class="flex flex-wrap gap-2">
+        <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">HTML</span> <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">CSS</span> <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">JavaScript</span> <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Python</span> <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Django</span> <span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Responsive</span>
+       </div>
+      </div><!-- Currently Working On -->
+      <div class="observe-anim anim-slide-left delay-4 glow-border rounded-sm p-6">
+       <div class="flex items-center gap-3 mb-5">
+        <i data-lucide="trending-up" class="w-6 h-6 text-accent"></i>
+        <h3 class="font-display text-xl font-semibold text-text">Currently Working On</h3>
+       </div>
+       <ul class="space-y-3">
+        <li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span> <span class="text-sm text-textdim">Improving React skills</span></li>
+        <li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span> <span class="text-sm text-textdim">Building real-world projects</span></li>
+        <li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span> <span class="text-sm text-textdim">Strengthening problem-solving</span></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 6: CONTACT ==================== -->
+   <section id="contact" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
+    <div class="max-w-4xl mx-auto px-6">
+     <div class="text-center mb-16">
+      <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; let's.connect()</p>
+      <h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Let's Work Together</h2>
+      <p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto">I'm open to remote jobs, internships, and freelance projects. If you need a dedicated developer, let's connect!</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div class="observe-anim anim-fade-up delay-3 space-y-6">
+       <div class="flex items-start gap-4 glow-border rounded-sm p-4">
+        <i data-lucide="mail" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+        <div>
+         <p class="text-xs font-code tracking-wider text-accent mb-1">EMAIL</p>
+         <p id="display-email" class="text-sm text-text font-code">your@email.com</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 glow-border rounded-sm p-4">
+        <i data-lucide="linkedin" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+        <div>
+         <p class="text-xs font-code tracking-wider text-accent mb-1">LINKEDIN</p>
+         <p id="display-linkedin" class="text-sm text-text font-code">linkedin.com/in/profile</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 glow-border rounded-sm p-4">
+        <i data-lucide="github" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i>
+        <div>
+         <p class="text-xs font-code tracking-wider text-accent mb-1">GITHUB</p>
+         <p id="display-github" class="text-sm text-text font-code">github.com/yourname</p>
+        </div>
+       </div>
+       <div class="pt-4">
+        <p class="text-xs font-code tracking-wider text-accent mb-3">OPEN TO</p>
+        <div class="flex flex-wrap gap-2">
+         <span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Remote Jobs</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Internships</span> <span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Freelance</span>
+        </div>
+       </div>
+      </div><!-- Contact Form -->
+      <div class="observe-anim anim-fade-up delay-4">
+       <form id="contact-form" class="space-y-4">
+        <div>
+         <label for="name" class="block text-xs font-code tracking-wider text-accent mb-2">Name</label> <input type="text" id="name" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm" placeholder="Your name">
+        </div>
+        <div>
+         <label for="email" class="block text-xs font-code tracking-wider text-accent mb-2">Email</label> <input type="email" id="email" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm" placeholder="your@email.com">
+        </div>
+        <div>
+         <label for="message" class="block text-xs font-code tracking-wider text-accent mb-2">Message</label> <textarea id="message" rows="4" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 resize-none rounded-sm" placeholder="Tell me about your project..."></textarea>
+        </div><button type="submit" class="w-full btn-primary text-white px-6 py-3.5 text-xs font-medium tracking-wider uppercase rounded-sm flex items-center justify-center gap-2"> <i data-lucide="send" class="w-4 h-4"></i> <span id="submit-text">Send Message</span> </button>
+        <p id="form-status" class="text-center text-sm text-accent font-code hidden"></p>
+       </form>
+      </div>
+     </div>
+     <div class="observe-anim anim-fade-up delay-5 text-center mt-16">
+      <p class="font-display italic text-lg text-textdim">I look forward to hearing from you!</p>
+     </div>
+    </div>
+   </section><!-- FOOTER -->
+   <footer class="w-full bg-darkcard py-10 border-t border-accentalt/20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+     <p class="font-display text-2xl font-bold text-accent mb-2 anim-glow" id="nav-brand-footer">&lt;A.I.G /&gt;</p>
+     <p id="footer-tagline" class="font-code italic text-sm text-textdim mb-6">"Driven by passion, powered by growth."</p>
+     <p class="text-xs text-textdim tracking-wider font-code">© 2025 Agho Ivie Gracious. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // ====== Intersection Observer for scroll animations ======
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.observe-anim').forEach(el => observer.observe(el));
+
+    // ====== Mobile menu toggle ======
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+    mobileToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden', !menuOpen);
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // ====== Contact form ======
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameVal = document.getElementById('name').value.trim();
+      const emailVal = document.getElementById('email').value.trim();
+      const msgVal = document.getElementById('message').value.trim();
+      const status = document.getElementById('form-status');
+
+      if (!nameVal || !emailVal || !msgVal) {
+        status.textContent = 'Please fill in all fields.';
+        status.classList.remove('hidden');
+        status.style.color = '#C4A265';
+        return;
+      }
+
+      // Simulate submission
+      const btn = e.target.querySelector('button[type="submit"]');
+      const submitText = document.getElementById('submit-text');
+      btn.disabled = true;
+      submitText.textContent = 'Sending...';
+
+      setTimeout(() => {
+        status.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+        status.classList.remove('hidden');
+        status.style.color = '#C4A265';
+        submitText.textContent = 'Send Message';
+        btn.disabled = false;
+        e.target.reset();
+        setTimeout(() => status.classList.add('hidden'), 4000);
+      }, 1500);
+    });
+
+    // ====== Active nav link on scroll ======
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const appWrapper = document.getElementById('app-wrapper');
+
+    appWrapper.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (appWrapper.scrollTop >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // ====== Initialize Lucide Icons ======
+    lucide.createIcons();
+
+    // ====== Element SDK ======
+    const defaultConfig = {
+      hero_name: 'Agho Ivie Gracious',
+      hero_tagline: 'Web Developer  •  Creative Thinker  •  Future Tech Innovator',
+      hero_cta: '"Let\'s build something amazing together."',
+      about_heading: 'About Me',
+      contact_email: 'your@email.com',
+      contact_linkedin: 'linkedin.com/in/yourprofile',
+      contact_github: 'github.com/yourusername',
+      footer_tagline: '"Driven by passion, powered by growth."',
+      background_color: '#000000',
+      surface_color: '#001a1f',
+      text_color: '#00d4ff',
+      accent_color: '#00d4ff',
+      secondary_action_color: '#00a8cc',
+      font_family: 'Cormorant Garamond',
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const c = { ...defaultConfig, ...config };
+
+      // Text updates
+      const heroName = document.getElementById('hero-name');
+      if (heroName) {
+        const parts = (c.hero_name || defaultConfig.hero_name).split(' ');
+        if (parts.length >= 3) {
+          heroName.innerHTML = parts.slice(0, 2).join(' ') + '<br>' + parts.slice(2).join(' ');
+        } else if (parts.length === 2) {
+          heroName.innerHTML = parts[0] + '<br>' + parts[1];
+        } else {
+          heroName.textContent = c.hero_name || defaultConfig.hero_name;
+        }
+      }
+
+      const heroTagline = document.getElementById('hero-tagline');
+      if (heroTagline) heroTagline.textContent = c.hero_tagline || defaultConfig.hero_tagline;
+
+      const heroCta = document.getElementById('hero-cta');
+      if (heroCta) heroCta.textContent = c.hero_cta || defaultConfig.hero_cta;
+
+      const aboutHeading = document.getElementById('about-heading');
+      if (aboutHeading) aboutHeading.textContent = c.about_heading || defaultConfig.about_heading;
+
+      const displayEmail = document.getElementById('display-email');
+      if (displayEmail) displayEmail.textContent = c.contact_email || defaultConfig.contact_email;
+
+      const displayLinkedin = document.getElementById('display-linkedin');
+      if (displayLinkedin) displayLinkedin.textContent = c.contact_linkedin || defaultConfig.contact_linkedin;
+
+      const displayGithub = document.getElementById('display-github');
+      if (displayGithub) displayGithub.textContent = c.contact_github || defaultConfig.contact_github;
+
+      const footerTagline = document.getElementById('footer-tagline');
+      if (footerTagline) footerTagline.textContent = c.footer_tagline || defaultConfig.footer_tagline;
+
+      // Color updates
+      const bg = c.background_color || defaultConfig.background_color;
+      const surface = c.surface_color || defaultConfig.surface_color;
+      const text = c.text_color || defaultConfig.text_color;
+      const accent = c.accent_color || defaultConfig.accent_color;
+      const secondary = c.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.documentElement.style.setProperty('--bg', bg);
+      document.body.style.backgroundColor = bg;
+      document.getElementById('app-wrapper').style.backgroundColor = bg;
+
+      // Update nav
+      const nav = document.getElementById('main-nav');
+      if (nav) nav.style.backgroundColor = bg + 'cc';
+
+      // Update section backgrounds
+      document.querySelectorAll('#hero, #projects, #contact').forEach(s => s.style.backgroundColor = bg);
+      document.querySelectorAll('#about, #expertise').forEach(s => s.style.backgroundColor = surface);
+
+      // Update text color on body
+      document.body.style.color = text;
+
+      // Update all charcoal text elements
+      document.querySelectorAll('.text-charcoal').forEach(el => el.style.color = text);
+      document.querySelectorAll('.text-warmgold').forEach(el => el.style.color = accent);
+      document.querySelectorAll('.text-slate').forEach(el => el.style.color = secondary);
+
+      // Update accent-colored elements
+      document.querySelectorAll('.bg-warmgold\\/10').forEach(el => el.style.backgroundColor = accent + '1a');
+      document.querySelectorAll('.border-warmgold\\/10, .border-warmgold\\/15, .border-warmgold\\/20').forEach(el => el.style.borderColor = accent + '30');
+      document.querySelectorAll('.bg-charcoal').forEach(el => {
+        if (!el.closest('#funfacts') && !el.closest('footer')) {
+          el.style.backgroundColor = text;
+        }
+      });
+
+      // Elegant line
+      document.querySelectorAll('.elegant-line').forEach(el => {
+        el.style.background = `linear-gradient(90deg, transparent, ${accent}, transparent)`;
+      });
+
+      // Font updates
+      const fontFamily = c.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Georgia, serif';
+      const bodyFontStack = '"Outfit", "Helvetica Neue", sans-serif';
+
+      document.querySelectorAll('.font-display').forEach(el => {
+        el.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      });
+      document.querySelectorAll('.font-body, body').forEach(el => {
+        el.style.fontFamily = bodyFontStack;
+      });
+
+      // Font size updates
+      const baseSize = c.font_size || defaultConfig.font_size;
+      document.querySelectorAll('h1').forEach(el => el.style.fontSize = `${baseSize * 3.5}px`);
+      document.querySelectorAll('h2').forEach(el => el.style.fontSize = `${baseSize * 2.5}px`);
+      document.querySelectorAll('h3').forEach(el => el.style.fontSize = `${baseSize * 1.25}px`);
+      document.querySelectorAll('p, li, span').forEach(el => {
+        if (el.closest('h1') || el.closest('h2') || el.closest('h3')) return;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      const c = { ...defaultConfig, ...config };
+      return {
+        recolorables: [
+          {
+            get: () => c.background_color || defaultConfig.background_color,
+            set: (v) => { c.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+          },
+          {
+            get: () => c.surface_color || defaultConfig.surface_color,
+            set: (v) => { c.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+          },
+          {
+            get: () => c.text_color || defaultConfig.text_color,
+            set: (v) => { c.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+          },
+          {
+            get: () => c.accent_color || defaultConfig.accent_color,
+            set: (v) => { c.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); }
+          },
+          {
+            get: () => c.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (v) => { c.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => c.font_family || defaultConfig.font_family,
+          set: (v) => { c.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => c.font_size || defaultConfig.font_size,
+          set: (v) => { c.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      const c = { ...defaultConfig, ...config };
+      return new Map([
+        ['hero_name', c.hero_name || defaultConfig.hero_name],
+        ['hero_tagline', c.hero_tagline || defaultConfig.hero_tagline],
+        ['hero_cta', c.hero_cta || defaultConfig.hero_cta],
+        ['about_heading', c.about_heading || defaultConfig.about_heading],
+        ['contact_email', c.contact_email || defaultConfig.contact_email],
+        ['contact_linkedin', c.contact_linkedin || defaultConfig.contact_linkedin],
+        ['contact_github', c.contact_github || defaultConfig.contact_github],
+        ['footer_tagline', c.footer_tagline || defaultConfig.footer_tagline]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e3840b9f11e071c',t:'MTc3NDcxNzg3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
