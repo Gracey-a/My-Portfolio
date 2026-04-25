@@ -6,7 +6,6 @@
     <title>Agho Ivie Gracious — Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-    <script src="/_sdk/element_sdk.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
@@ -32,7 +31,6 @@
       html {
         scroll-behavior: smooth;
       }
-
       .font-display {
         font-family: "Space Mono", monospace;
       }
@@ -42,67 +40,24 @@
       .font-body {
         font-family: "Poppins", sans-serif;
       }
-
-      .anim-fade-up {
-        opacity: 1;
-      }
-      .anim-fade-in {
-        opacity: 1;
-      }
-      .anim-slide-left {
-        opacity: 1;
-      }
-      .anim-slide-right {
-        opacity: 1;
-      }
-      .anim-scale-in {
-        opacity: 1;
-      }
-      .anim-glow {
-      }
-      .anim-float {
-      }
-
-      .delay-1 {
-      }
-      .delay-2 {
-      }
-      .delay-3 {
-      }
-      .delay-4 {
-      }
-      .delay-5 {
-      }
-      .delay-6 {
-      }
-      .delay-7 {
-      }
-
       .observe-anim {
         opacity: 1;
       }
       .observe-anim.visible {
         opacity: 1;
       }
-
-      /* Glow effects */
       .glow-accent {
         box-shadow: 0 0 20px #9b7ba811;
       }
-
       .glow-accent:hover {
         box-shadow: 0 0 30px #9b7ba822;
       }
-
       .glow-border {
         border: 1px solid #9b7ba844;
       }
-
       .code-border {
         border: 1px solid #9b7ba844;
       }
-
-      /* Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -116,8 +71,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #00d4ff;
       }
-
-      /* Image placeholder */
       .hero-image-placeholder {
         background: radial-gradient(circle, #1a0f1f 0%, #0a0608 100%);
         position: relative;
@@ -145,15 +98,6 @@
         inset: 0;
         border: 1px solid #9b7ba822;
       }
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
       .about-image-placeholder {
         background: radial-gradient(circle, #1a0f1f 0%, #0a0608 100%);
         position: relative;
@@ -170,8 +114,6 @@
         border-radius: 50%;
         border: 1px solid #9b7ba822;
       }
-
-      /* Project card hover */
       .project-card {
         transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         border: 1px solid #9b7ba833;
@@ -183,8 +125,6 @@
         box-shadow: 0 25px 70px #9b7ba811;
         background: linear-gradient(135deg, #1a0f1f44, #9b7ba816);
       }
-
-      /* Skill tag */
       .skill-tag {
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         border: 1.5px solid #9b7ba855;
@@ -196,8 +136,6 @@
         box-shadow: 0 0 15px #9b7ba822;
         transform: translateY(-4px) scale(1.05);
       }
-
-      /* Fun fact card */
       .fun-card {
         transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         border: 1px solid #9b7ba833;
@@ -209,8 +147,6 @@
         box-shadow: 0 20px 50px #9b7ba811;
         background: linear-gradient(135deg, #1a0f1f55, #9b7ba816);
       }
-
-      /* Contact form input */
       .contact-input {
         transition: all 0.3s ease;
         border: 1px solid #9b7ba844;
@@ -222,15 +158,12 @@
         box-shadow: 0 0 15px #9b7ba811;
         background: #12090f;
       }
-
-      /* Nav */
       .nav-blur {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid #9b7ba833;
         background: #0a0608cc;
       }
-
       .nav-link {
         position: relative;
         transition: color 0.3s ease;
@@ -249,8 +182,6 @@
       .nav-link.active::after {
         width: 100%;
       }
-
-      /* Button styles */
       .btn-primary {
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         border: 1px solid #9b7ba8;
@@ -264,7 +195,6 @@
       .btn-primary:active {
         transform: translateY(0);
       }
-
       .btn-secondary {
         transition: all 0.3s ease;
         border: 1px solid #9b7ba844;
@@ -275,32 +205,26 @@
         background: #9b7ba811;
         box-shadow: 0 0 15px #9b7ba816;
       }
-
-      /* Code snippet style */
       .code-snippet {
         font-family: "JetBrains Mono", monospace;
         background: linear-gradient(135deg, #0a0608 0%, #12090f 100%);
         border: 1px solid #9b7ba844;
         overflow: hidden;
       }
-
-      /* Pattern overlay */
       .pattern-grid {
         background-image:
           linear-gradient(#9b7ba80a 1px, transparent 1px),
           linear-gradient(90deg, #9b7ba80a 1px, transparent 1px);
         background-size: 50px 50px;
       }
-
       body {
         box-sizing: border-box;
       }
     </style>
-    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   </head>
   <body class="h-full font-body bg-darkbg text-text">
     <div id="app-wrapper" class="w-full h-full overflow-auto">
-      <!-- NAVIGATION -->
+      <!-- NAVIGATION (same as before) -->
       <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-blur">
         <div
           class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
@@ -342,7 +266,6 @@
             >
           </div>
         </div>
-        <!-- Mobile Menu -->
         <div
           id="mobile-menu"
           class="hidden md:hidden bg-darkbg/95 nav-blur px-6 py-4"
@@ -377,14 +300,14 @@
           </div>
         </div>
       </nav>
-      <!-- ==================== SECTION 1: HERO / COVER PAGE ==================== -->
+
+      <!-- HERO SECTION (unchanged) -->
       <section
         id="hero"
         class="relative w-full min-h-full flex items-center bg-darkbg pattern-grid overflow-hidden"
       >
         <div class="max-w-6xl mx-auto px-6 py-32 md:py-0 w-full">
           <div class="grid md:grid-cols-2 gap-12 items-center">
-            <!-- Left Content -->
             <div class="order-2 md:order-1 z-10">
               <div class="observe-anim anim-fade-up delay-1">
                 <p
@@ -397,8 +320,7 @@
                 id="hero-name"
                 class="observe-anim anim-fade-up delay-2 font-display text-5xl md:text-7xl font-bold leading-[1.1] text-text mb-4 anim-glow tracking-wider"
               >
-                Agho Ivie<br />
-                Gracious
+                Agho Ivie<br />Gracious
               </h1>
               <p
                 id="hero-tagline"
@@ -425,18 +347,15 @@
                 <a
                   href="#contact"
                   class="inline-flex items-center gap-2 btn-primary text-white px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"
+                  ><i data-lucide="send" class="w-4 h-4"></i> Let's Connect</a
                 >
-                  <i data-lucide="send" class="w-4 h-4"></i> Let's Connect
-                </a>
                 <a
                   href="#projects"
                   class="inline-flex items-center gap-2 btn-secondary text-accent px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"
+                  ><i data-lucide="code-2" class="w-4 h-4"></i> View Work</a
                 >
-                  <i data-lucide="code-2" class="w-4 h-4"></i> View Work
-                </a>
               </div>
             </div>
-            <!-- Right Image Placeholder -->
             <div
               class="order-1 md:order-2 flex justify-center md:justify-end relative"
             >
@@ -458,7 +377,6 @@
             </div>
           </div>
         </div>
-        <!-- Scroll indicator -->
         <div
           class="absolute bottom-8 left-1/2 -translate-x-1/2 observe-anim anim-fade-in delay-7"
         >
@@ -473,14 +391,14 @@
           </div>
         </div>
       </section>
-      <!-- ==================== SECTION 2: ABOUT / INTRO ==================== -->
+
+      <!-- ABOUT SECTION (unchanged) -->
       <section
         id="about"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
       >
         <div class="max-w-5xl mx-auto px-6">
           <div class="grid md:grid-cols-3 gap-12 items-start">
-            <!-- Left column: image + name -->
             <div
               class="md:col-span-1 flex flex-col items-center md:items-start"
             >
@@ -501,7 +419,6 @@
                 About Me
               </h2>
             </div>
-            <!-- Right column: bio -->
             <div class="md:col-span-2 space-y-5">
               <p
                 class="observe-anim anim-fade-up delay-2 text-base text-text leading-relaxed"
@@ -549,15 +466,15 @@
               >
                 <p class="font-code text-sm text-accent">const philosophy =</p>
                 <p class="font-code text-sm text-textdim italic">
-                  "Consistency, creativity,<br />
-                  continuous learning"
+                  "Consistency, creativity,<br />continuous learning"
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ==================== SECTION 3: PROJECTS CATALOG ==================== -->
+
+      <!-- PROJECTS SECTION (with working buttons) -->
       <section
         id="projects"
         class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
@@ -582,7 +499,7 @@
             </p>
           </div>
           <div class="grid md:grid-cols-2 gap-8">
-            <!-- Project 1 (Coffee Shop Website) -->
+            <!-- Project 1: Coffee Shop -->
             <div
               class="observe-anim anim-fade-up delay-2 project-card rounded-sm p-8"
             >
@@ -619,12 +536,10 @@
                 <span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >HTML5</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >CSS3</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >JavaScript</span
                 >
@@ -634,20 +549,17 @@
                   href="https://gracey-a.github.io/coffee-shop-website/"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                >
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live
-                  Demo
-                </a>
-                <a
+                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live
+                  Demo</a
+                ><a
                   href="https://github.com/gracey-a/coffee-shop-website"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
+                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a
                 >
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-                </a>
               </div>
             </div>
-            <!-- Project 2 (Task Manager) -->
+            <!-- Project 2: Task Manager -->
             <div
               class="observe-anim anim-fade-up delay-3 project-card rounded-sm p-8"
             >
@@ -684,12 +596,10 @@
                 <span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >HTML</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >CSS</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >JavaScript</span
                 >
@@ -699,19 +609,17 @@
                   href="#"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                >
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Demo
-                </a>
-                <a
+                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  Demo</a
+                ><a
                   href="#"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
+                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a
                 >
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-                </a>
               </div>
             </div>
-            <!-- Project 3 (E-Commerce Store) -->
+            <!-- Project 3: E-Commerce Store -->
             <div
               class="observe-anim anim-fade-up delay-4 project-card rounded-sm p-8"
             >
@@ -748,12 +656,10 @@
                 <span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >HTML</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >CSS</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >React</span
                 >
@@ -763,19 +669,17 @@
                   href="#"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                >
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Demo
-                </a>
-                <a
+                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  Demo</a
+                ><a
                   href="#"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
+                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a
                 >
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-                </a>
               </div>
             </div>
-            <!-- Project 4 (Django Blog) -->
+            <!-- Project 4: Django Blog -->
             <div
               class="observe-anim anim-fade-up delay-5 project-card rounded-sm p-8"
             >
@@ -822,24 +726,19 @@
                 <span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >Django</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >Python</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >Tailwind CSS</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >PostgreSQL</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >Cloudinary</span
-                >
-                <span
+                ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
                   >Render</span
                 >
@@ -849,17 +748,14 @@
                   href="https://django-blog-52oj.onrender.com"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                >
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live
-                  Blog
-                </a>
-                <a
+                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live
+                  Blog</a
+                ><a
                   href="https://github.com/Gracey-a/Django-blog"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
+                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a
                 >
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-                </a>
               </div>
             </div>
             <!-- More Projects placeholder -->
@@ -875,14 +771,14 @@
                 More Coming Soon
               </p>
               <p class="text-sm text-textdim">
-                Building new projects<br />
-                Check back soon!
+                Building new projects<br />Check back soon!
               </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- ==================== SECTION 4: FUN FACTS ==================== -->
+
+      <!-- FUN FACTS (unchanged) -->
       <section
         id="funfacts"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
@@ -973,7 +869,8 @@
           </div>
         </div>
       </section>
-      <!-- ==================== SECTION 5: EXPERTISE / BONUS ==================== -->
+
+      <!-- EXPERTISE SECTION (unchanged) -->
       <section
         id="expertise"
         class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
@@ -992,7 +889,6 @@
             </h2>
           </div>
           <div class="grid md:grid-cols-3 gap-10">
-            <!-- Where I Learned -->
             <div
               class="observe-anim anim-slide-left delay-2 glow-border rounded-sm p-6"
             >
@@ -1018,7 +914,6 @@
                 online resources.
               </p>
             </div>
-            <!-- My Expertise -->
             <div
               class="observe-anim anim-slide-left delay-3 glow-border rounded-sm p-6"
             >
@@ -1032,30 +927,24 @@
                 <span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >HTML</span
-                >
-                <span
+                ><span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >CSS</span
-                >
-                <span
+                ><span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >JavaScript</span
-                >
-                <span
+                ><span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >Python</span
-                >
-                <span
+                ><span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >Django</span
-                >
-                <span
+                ><span
                   class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
                   >Responsive</span
                 >
               </div>
             </div>
-            <!-- Currently Working On -->
             <div
               class="observe-anim anim-slide-left delay-4 glow-border rounded-sm p-6"
             >
@@ -1067,20 +956,20 @@
               </div>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span>
-                  <span class="text-sm text-textdim"
+                  <span class="text-accent font-bold mt-1">→</span
+                  ><span class="text-sm text-textdim"
                     >Improving React skills</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span>
-                  <span class="text-sm text-textdim"
+                  <span class="text-accent font-bold mt-1">→</span
+                  ><span class="text-sm text-textdim"
                     >Building real-world projects</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span>
-                  <span class="text-sm text-textdim"
+                  <span class="text-accent font-bold mt-1">→</span
+                  ><span class="text-sm text-textdim"
                     >Strengthening problem-solving</span
                   >
                 </li>
@@ -1089,7 +978,8 @@
           </div>
         </div>
       </section>
-      <!-- ==================== SECTION 6: CONTACT ==================== -->
+
+      <!-- CONTACT SECTION (with Netlify Form + Thank You) -->
       <section
         id="contact"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
@@ -1114,7 +1004,7 @@
             </p>
           </div>
           <div class="grid md:grid-cols-2 gap-12">
-            <!-- Contact Info -->
+            <!-- Contact Info (clickable) -->
             <div class="observe-anim anim-fade-up delay-3 space-y-6">
               <div class="flex items-start gap-4 glow-border rounded-sm p-4">
                 <i
@@ -1125,9 +1015,11 @@
                   <p class="text-xs font-code tracking-wider text-accent mb-1">
                     EMAIL
                   </p>
-                  <p id="display-email" class="text-sm text-text font-code">
-                    ivieagho29@gmail.com
-                  </p>
+                  <a
+                    href="mailto:ivieagho29@gmail.com"
+                    class="text-sm text-text font-code hover:text-accent transition-colors"
+                    >ivieagho29@gmail.com</a
+                  >
                 </div>
               </div>
               <div class="flex items-start gap-4 glow-border rounded-sm p-4">
@@ -1139,9 +1031,13 @@
                   <p class="text-xs font-code tracking-wider text-accent mb-1">
                     LINKEDIN
                   </p>
-                  <p id="display-linkedin" class="text-sm text-text font-code">
-                    linkedin.com/in/agho-ivie-176bbb262
-                  </p>
+                  <a
+                    href="https://linkedin.com/in/agho-ivie-176bbb262"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-text font-code hover:text-accent transition-colors"
+                    >linkedin.com/in/agho-ivie-176bbb262</a
+                  >
                 </div>
               </div>
               <div class="flex items-start gap-4 glow-border rounded-sm p-4">
@@ -1153,9 +1049,13 @@
                   <p class="text-xs font-code tracking-wider text-accent mb-1">
                     GITHUB
                   </p>
-                  <p id="display-github" class="text-sm text-text font-code">
-                    github.com/Gracey-a
-                  </p>
+                  <a
+                    href="https://github.com/Gracey-a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-text font-code hover:text-accent transition-colors"
+                    >github.com/Gracey-a</a
+                  >
                 </div>
               </div>
               <div class="pt-4">
@@ -1178,9 +1078,24 @@
                 </div>
               </div>
             </div>
-            <!-- Contact Form -->
-            <div class="observe-anim anim-fade-up delay-4">
-              <form id="contact-form" class="space-y-4">
+
+            <!-- Netlify Form with custom thank-you -->
+            <div class="observe-anim anim-fade-up delay-4" id="form-container">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                id="contact-form"
+                class="space-y-4"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                  <label
+                    >Don't fill this out if you're human:
+                    <input name="bot-field"
+                  /></label>
+                </p>
                 <div>
                   <label
                     for="name"
@@ -1190,8 +1105,10 @@
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div>
@@ -1203,8 +1120,10 @@
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
                 <div>
@@ -1215,9 +1134,11 @@
                   >
                   <textarea
                     id="message"
+                    name="message"
                     rows="4"
                     class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 resize-none rounded-sm"
                     placeholder="Tell me about your project..."
+                    required
                   ></textarea>
                 </div>
                 <button
@@ -1225,13 +1146,26 @@
                   class="w-full btn-primary text-white px-6 py-3.5 text-xs font-medium tracking-wider uppercase rounded-sm flex items-center justify-center gap-2"
                 >
                   <i data-lucide="send" class="w-4 h-4"></i>
-                  <span id="submit-text">Send Message</span>
+                  <span>Send Message</span>
                 </button>
-                <p
-                  id="form-status"
-                  class="text-center text-sm text-accent font-code hidden"
-                ></p>
               </form>
+              <!-- Thank-you message (hidden initially) -->
+              <div
+                id="thank-you"
+                class="hidden text-center p-8 rounded-sm glow-border bg-darkbg/50"
+              >
+                <i
+                  data-lucide="check-circle"
+                  class="w-16 h-16 text-accent mx-auto mb-4"
+                ></i>
+                <h3 class="font-display text-2xl font-semibold text-white mb-2">
+                  Thank You!
+                </h3>
+                <p class="text-textdim">
+                  Your message has been sent successfully. I'll get back to you
+                  soon.
+                </p>
+              </div>
             </div>
           </div>
           <div class="observe-anim anim-fade-up delay-5 text-center mt-16">
@@ -1241,7 +1175,8 @@
           </div>
         </div>
       </section>
-      <!-- FOOTER -->
+
+      <!-- FOOTER (unchanged) -->
       <footer class="w-full bg-darkcard py-10 border-t border-accentalt/20">
         <div class="max-w-5xl mx-auto px-6 text-center">
           <p
@@ -1262,8 +1197,9 @@
         </div>
       </footer>
     </div>
+
     <script>
-      // ====== Intersection Observer for scroll animations ======
+      // Intersection Observer for scroll animations
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -1275,12 +1211,11 @@
         },
         { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
       );
-
       document
         .querySelectorAll(".observe-anim")
         .forEach((el) => observer.observe(el));
 
-      // ====== Mobile menu toggle ======
+      // Mobile menu toggle
       const mobileToggle = document.getElementById("mobile-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
       let menuOpen = false;
@@ -1288,7 +1223,6 @@
         menuOpen = !menuOpen;
         mobileMenu.classList.toggle("hidden", !menuOpen);
       });
-      // Close mobile menu on link click
       mobileMenu.querySelectorAll("a").forEach((a) => {
         a.addEventListener("click", () => {
           menuOpen = false;
@@ -1296,306 +1230,55 @@
         });
       });
 
-      // ====== Contact form ======
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", (e) => {
-          e.preventDefault();
-          const nameVal = document.getElementById("name").value.trim();
-          const emailVal = document.getElementById("email").value.trim();
-          const msgVal = document.getElementById("message").value.trim();
-          const status = document.getElementById("form-status");
-
-          if (!nameVal || !emailVal || !msgVal) {
-            status.textContent = "Please fill in all fields.";
-            status.classList.remove("hidden");
-            status.style.color = "#C4A265";
-            return;
-          }
-
-          // Simulate submission
-          const btn = e.target.querySelector('button[type="submit"]');
-          const submitText = document.getElementById("submit-text");
-          btn.disabled = true;
-          submitText.textContent = "Sending...";
-
-          setTimeout(() => {
-            status.textContent =
-              "✓ Message sent successfully! I'll get back to you soon.";
-            status.classList.remove("hidden");
-            status.style.color = "#C4A265";
-            submitText.textContent = "Send Message";
-            btn.disabled = false;
-            e.target.reset();
-            setTimeout(() => status.classList.add("hidden"), 4000);
-          }, 1500);
-        });
-
-      // ====== Active nav link on scroll ======
+      // Active nav link on scroll
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll(".nav-link");
       const appWrapper = document.getElementById("app-wrapper");
-
       appWrapper.addEventListener("scroll", () => {
         let current = "";
         sections.forEach((section) => {
-          const top = section.offsetTop - 100;
-          if (appWrapper.scrollTop >= top) {
+          if (appWrapper.scrollTop >= section.offsetTop - 100)
             current = section.getAttribute("id");
-          }
         });
-        navLinks.forEach((link) => {
+        navLinks.forEach((link) =>
           link.classList.toggle(
             "active",
             link.getAttribute("href") === "#" + current,
-          );
-        });
+          ),
+        );
       });
 
-      // ====== Initialize Lucide Icons ======
+      // Handle Netlify Form submission with AJAX (no page reload, show thank you)
+      const form = document.getElementById("contact-form");
+      const thankYouDiv = document.getElementById("thank-you");
+      const formContainer = document.getElementById("form-container");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => {
+            // Hide form, show thank you message
+            form.style.display = "none";
+            thankYouDiv.classList.remove("hidden");
+            // Optionally reset form if needed
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error submitting form:", error);
+            alert(
+              "There was a problem sending your message. Please try again or email me directly.",
+            );
+          });
+      });
+
+      // Initialize Lucide icons
       lucide.createIcons();
-
-      // ====== Element SDK ======
-      const defaultConfig = {
-        hero_name: "Agho Ivie Gracious",
-        hero_tagline:
-          "Web Developer  •  Creative Thinker  •  Future Tech Innovator",
-        hero_cta: '"Let\'s build something amazing together."',
-        about_heading: "About Me",
-        contact_email: "ivieagho29@gmail.com",
-        contact_linkedin: "linkedin.com/in/agho-ivie-176bbb262",
-        contact_github: "github.com/Gracey-a",
-        footer_tagline: '"Driven by passion, powered by growth."',
-        background_color: "#000000",
-        surface_color: "#001a1f",
-        text_color: "#00d4ff",
-        accent_color: "#00d4ff",
-        secondary_action_color: "#00a8cc",
-        font_family: "Cormorant Garamond",
-        font_size: 16,
-      };
-
-      async function onConfigChange(config) {
-        const c = { ...defaultConfig, ...config };
-
-        // Text updates
-        const heroName = document.getElementById("hero-name");
-        if (heroName) {
-          const parts = (c.hero_name || defaultConfig.hero_name).split(" ");
-          if (parts.length >= 3) {
-            heroName.innerHTML =
-              parts.slice(0, 2).join(" ") + "<br>" + parts.slice(2).join(" ");
-          } else if (parts.length === 2) {
-            heroName.innerHTML = parts[0] + "<br>" + parts[1];
-          } else {
-            heroName.textContent = c.hero_name || defaultConfig.hero_name;
-          }
-        }
-
-        const heroTagline = document.getElementById("hero-tagline");
-        if (heroTagline)
-          heroTagline.textContent =
-            c.hero_tagline || defaultConfig.hero_tagline;
-
-        const heroCta = document.getElementById("hero-cta");
-        if (heroCta) heroCta.textContent = c.hero_cta || defaultConfig.hero_cta;
-
-        const aboutHeading = document.getElementById("about-heading");
-        if (aboutHeading)
-          aboutHeading.textContent =
-            c.about_heading || defaultConfig.about_heading;
-
-        const displayEmail = document.getElementById("display-email");
-        if (displayEmail)
-          displayEmail.textContent =
-            c.contact_email || defaultConfig.contact_email;
-
-        const displayLinkedin = document.getElementById("display-linkedin");
-        if (displayLinkedin)
-          displayLinkedin.textContent =
-            c.contact_linkedin || defaultConfig.contact_linkedin;
-
-        const displayGithub = document.getElementById("display-github");
-        if (displayGithub)
-          displayGithub.textContent =
-            c.contact_github || defaultConfig.contact_github;
-
-        const footerTagline = document.getElementById("footer-tagline");
-        if (footerTagline)
-          footerTagline.textContent =
-            c.footer_tagline || defaultConfig.footer_tagline;
-
-        // Color updates
-        const bg = c.background_color || defaultConfig.background_color;
-        const surface = c.surface_color || defaultConfig.surface_color;
-        const text = c.text_color || defaultConfig.text_color;
-        const accent = c.accent_color || defaultConfig.accent_color;
-        const secondary =
-          c.secondary_action_color || defaultConfig.secondary_action_color;
-
-        document.documentElement.style.setProperty("--bg", bg);
-        document.body.style.backgroundColor = bg;
-        document.getElementById("app-wrapper").style.backgroundColor = bg;
-
-        // Update nav
-        const nav = document.getElementById("main-nav");
-        if (nav) nav.style.backgroundColor = bg + "cc";
-
-        // Update section backgrounds
-        document
-          .querySelectorAll("#hero, #projects, #contact")
-          .forEach((s) => (s.style.backgroundColor = bg));
-        document
-          .querySelectorAll("#about, #expertise")
-          .forEach((s) => (s.style.backgroundColor = surface));
-
-        // Update text color on body
-        document.body.style.color = text;
-
-        // Update all charcoal text elements
-        document
-          .querySelectorAll(".text-charcoal")
-          .forEach((el) => (el.style.color = text));
-        document
-          .querySelectorAll(".text-warmgold")
-          .forEach((el) => (el.style.color = accent));
-        document
-          .querySelectorAll(".text-slate")
-          .forEach((el) => (el.style.color = secondary));
-
-        // Update accent-colored elements
-        document
-          .querySelectorAll(".bg-warmgold\\/10")
-          .forEach((el) => (el.style.backgroundColor = accent + "1a"));
-        document
-          .querySelectorAll(
-            ".border-warmgold\\/10, .border-warmgold\\/15, .border-warmgold\\/20",
-          )
-          .forEach((el) => (el.style.borderColor = accent + "30"));
-        document.querySelectorAll(".bg-charcoal").forEach((el) => {
-          if (!el.closest("#funfacts") && !el.closest("footer")) {
-            el.style.backgroundColor = text;
-          }
-        });
-
-        // Elegant line
-        document.querySelectorAll(".elegant-line").forEach((el) => {
-          el.style.background = `linear-gradient(90deg, transparent, ${accent}, transparent)`;
-        });
-
-        // Font updates
-        const fontFamily = c.font_family || defaultConfig.font_family;
-        const baseFontStack = "Georgia, serif";
-        const bodyFontStack = '"Outfit", "Helvetica Neue", sans-serif';
-
-        document.querySelectorAll(".font-display").forEach((el) => {
-          el.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
-        });
-        document.querySelectorAll(".font-body, body").forEach((el) => {
-          el.style.fontFamily = bodyFontStack;
-        });
-
-        // Font size updates
-        const baseSize = c.font_size || defaultConfig.font_size;
-        document
-          .querySelectorAll("h1")
-          .forEach((el) => (el.style.fontSize = `${baseSize * 3.5}px`));
-        document
-          .querySelectorAll("h2")
-          .forEach((el) => (el.style.fontSize = `${baseSize * 2.5}px`));
-        document
-          .querySelectorAll("h3")
-          .forEach((el) => (el.style.fontSize = `${baseSize * 1.25}px`));
-        document.querySelectorAll("p, li, span").forEach((el) => {
-          if (el.closest("h1") || el.closest("h2") || el.closest("h3")) return;
-        });
-      }
-
-      function mapToCapabilities(config) {
-        const c = { ...defaultConfig, ...config };
-        return {
-          recolorables: [
-            {
-              get: () => c.background_color || defaultConfig.background_color,
-              set: (v) => {
-                c.background_color = v;
-                window.elementSdk.setConfig({ background_color: v });
-              },
-            },
-            {
-              get: () => c.surface_color || defaultConfig.surface_color,
-              set: (v) => {
-                c.surface_color = v;
-                window.elementSdk.setConfig({ surface_color: v });
-              },
-            },
-            {
-              get: () => c.text_color || defaultConfig.text_color,
-              set: (v) => {
-                c.text_color = v;
-                window.elementSdk.setConfig({ text_color: v });
-              },
-            },
-            {
-              get: () => c.accent_color || defaultConfig.accent_color,
-              set: (v) => {
-                c.accent_color = v;
-                window.elementSdk.setConfig({ accent_color: v });
-              },
-            },
-            {
-              get: () =>
-                c.secondary_action_color ||
-                defaultConfig.secondary_action_color,
-              set: (v) => {
-                c.secondary_action_color = v;
-                window.elementSdk.setConfig({ secondary_action_color: v });
-              },
-            },
-          ],
-          borderables: [],
-          fontEditable: {
-            get: () => c.font_family || defaultConfig.font_family,
-            set: (v) => {
-              c.font_family = v;
-              window.elementSdk.setConfig({ font_family: v });
-            },
-          },
-          fontSizeable: {
-            get: () => c.font_size || defaultConfig.font_size,
-            set: (v) => {
-              c.font_size = v;
-              window.elementSdk.setConfig({ font_size: v });
-            },
-          },
-        };
-      }
-
-      function mapToEditPanelValues(config) {
-        const c = { ...defaultConfig, ...config };
-        return new Map([
-          ["hero_name", c.hero_name || defaultConfig.hero_name],
-          ["hero_tagline", c.hero_tagline || defaultConfig.hero_tagline],
-          ["hero_cta", c.hero_cta || defaultConfig.hero_cta],
-          ["about_heading", c.about_heading || defaultConfig.about_heading],
-          ["contact_email", c.contact_email || defaultConfig.contact_email],
-          [
-            "contact_linkedin",
-            c.contact_linkedin || defaultConfig.contact_linkedin,
-          ],
-          ["contact_github", c.contact_github || defaultConfig.contact_github],
-          ["footer_tagline", c.footer_tagline || defaultConfig.footer_tagline],
-        ]);
-      }
-
-      if (window.elementSdk) {
-        window.elementSdk.init({
-          defaultConfig,
-          onConfigChange,
-          mapToCapabilities,
-          mapToEditPanelValues,
-        });
-      }
     </script>
   </body>
 </html>
