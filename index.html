@@ -78,8 +78,8 @@
         overflow: hidden;
         border-radius: 0;
         width: 100%;
-        max-width: 320px;
-        height: 280px;
+        max-width: 360px;
+        height: 320px;
         box-shadow: 0 0 20px #9b7ba811;
       }
       .hero-image-placeholder::before {
@@ -360,19 +360,14 @@
               class="order-1 md:order-2 flex justify-center md:justify-end relative"
             >
               <div
-                class="observe-anim anim-float delay-3 hero-image-placeholder rounded-full shadow-2xl flex items-center justify-center glow-accent"
+                class="observe-anim anim-float delay-3 hero-image-placeholder rounded-full shadow-2xl flex items-center justify-center glow-accent overflow-hidden"
               >
-                <div class="relative z-10 text-center">
-                  <i
-                    data-lucide="user"
-                    class="w-16 h-16 text-accent/40 mx-auto"
-                  ></i>
-                  <p
-                    class="text-accent text-xs tracking-widest uppercase font-code mt-2"
-                  >
-                    Your Face
-                  </p>
-                </div>
+                <img
+                  src="Profile.png"
+                  alt="Agho Ivie Gracious"
+                  class="w-full h-full object-cover"
+                  style="transform: scale(1.05)"
+                />
               </div>
             </div>
           </div>
@@ -403,9 +398,14 @@
               class="md:col-span-1 flex flex-col items-center md:items-start"
             >
               <div
-                class="observe-anim anim-scale-in about-image-placeholder flex items-center justify-center mb-6"
+                class="observe-anim anim-scale-in about-image-placeholder flex items-center justify-center overflow-hidden rounded-full mb-6"
               >
-                <i data-lucide="user" class="w-8 h-8 text-accent/50"></i>
+                <img
+                  src="profile2.png"
+                  alt="Agho Ivie Gracious face"
+                  class="w-full h-full object-cover"
+                  style="transform: scale(1.1)"
+                />
               </div>
               <p
                 class="observe-anim anim-fade-up delay-1 text-xs font-code tracking-widest text-accent mb-2"
@@ -1086,6 +1086,7 @@
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                action="/thank-you.html"
                 class="space-y-4"
               >
                 <input type="hidden" name="form-name" value="contact" />

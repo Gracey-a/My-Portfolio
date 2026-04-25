@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Agho Ivie Gracious</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #0a0608;
+        font-family: "Poppins", sans-serif;
+        color: #e0d9e1;
+      }
+      .glow-border {
+        border: 1px solid #9b7ba844;
+      }
+      .btn-primary {
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border: 1px solid #9b7ba8;
+        background: linear-gradient(135deg, #9b7ba8 0%, #8b6b98 100%);
+      }
+      .btn-primary:hover {
+        border-color: #b399c1;
+        box-shadow: 0 0 20px #9b7ba822;
+        transform: translateY(-2px);
+      }
+      .pattern-grid {
+        background-image:
+          linear-gradient(#9b7ba80a 1px, transparent 1px),
+          linear-gradient(90deg, #9b7ba80a 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-6 pattern-grid">
+    <div class="max-w-lg w-full">
+      <!-- Main thank-you card -->
+      <div
+        class="glow-border rounded-2xl p-10 bg-darkbg/40 backdrop-blur-sm text-center"
+      >
+        <!-- Icon -->
+        <div
+          class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-accent/30"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#9b7ba8"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+          Thank You!
+        </h1>
+        <p class="text-textdim text-lg mb-2">
+          Your message has been sent successfully.
+        </p>
+        <p class="text-textdim text-sm mb-8">
+          I'll get back to you as soon as possible.
+        </p>
+
+        <div class="h-px bg-accent/20 my-6"></div>
+
+        <p class="text-textdim text-xs font-code mb-6">
+          ✨ A confirmation email has been sent to you (if you provided a valid
+          address).
+        </p>
+
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 btn-primary text-white px-8 py-3 text-sm font-medium tracking-wider uppercase rounded-sm transition-all"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Portfolio
+        </a>
+      </div>
+
+      <!-- Small footer -->
+      <p class="text-center text-textdim text-xs mt-8 font-code">
+        © 2026 Agho Ivie Gracious
+      </p>
+    </div>
+  </body>
+</html>
