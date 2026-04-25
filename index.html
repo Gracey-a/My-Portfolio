@@ -224,7 +224,7 @@
   </head>
   <body class="h-full font-body bg-darkbg text-text">
     <div id="app-wrapper" class="w-full h-full overflow-auto">
-      <!-- NAVIGATION (same as before) -->
+      <!-- NAVIGATION -->
       <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-blur">
         <div
           class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
@@ -301,7 +301,7 @@
         </div>
       </nav>
 
-      <!-- HERO SECTION (unchanged) -->
+      <!-- HERO SECTION -->
       <section
         id="hero"
         class="relative w-full min-h-full flex items-center bg-darkbg pattern-grid overflow-hidden"
@@ -392,7 +392,7 @@
         </div>
       </section>
 
-      <!-- ABOUT SECTION (unchanged) -->
+      <!-- ABOUT SECTION -->
       <section
         id="about"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
@@ -474,7 +474,7 @@
         </div>
       </section>
 
-      <!-- PROJECTS SECTION (with working buttons) -->
+      <!-- PROJECTS SECTION -->
       <section
         id="projects"
         class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
@@ -778,7 +778,7 @@
         </div>
       </section>
 
-      <!-- FUN FACTS (unchanged) -->
+      <!-- FUN FACTS -->
       <section
         id="funfacts"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
@@ -870,7 +870,7 @@
         </div>
       </section>
 
-      <!-- EXPERTISE SECTION (unchanged) -->
+      <!-- EXPERTISE SECTION -->
       <section
         id="expertise"
         class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
@@ -979,7 +979,7 @@
         </div>
       </section>
 
-      <!-- CONTACT SECTION (with Netlify Form + Thank You) -->
+      <!-- CONTACT SECTION (Netlify Form – no AJAX, page will refresh) -->
       <section
         id="contact"
         class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
@@ -1079,14 +1079,13 @@
               </div>
             </div>
 
-            <!-- Netlify Form with custom thank-you -->
-            <div class="observe-anim anim-fade-up delay-4" id="form-container">
+            <!-- Netlify Form – standard HTML submission (no JavaScript fetch) -->
+            <div class="observe-anim anim-fade-up delay-4">
               <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-                id="contact-form"
                 class="space-y-4"
               >
                 <input type="hidden" name="form-name" value="contact" />
@@ -1149,23 +1148,10 @@
                   <span>Send Message</span>
                 </button>
               </form>
-              <!-- Thank-you message (hidden initially) -->
-              <div
-                id="thank-you"
-                class="hidden text-center p-8 rounded-sm glow-border bg-darkbg/50"
-              >
-                <i
-                  data-lucide="check-circle"
-                  class="w-16 h-16 text-accent mx-auto mb-4"
-                ></i>
-                <h3 class="font-display text-2xl font-semibold text-white mb-2">
-                  Thank You!
-                </h3>
-                <p class="text-textdim">
-                  Your message has been sent successfully. I'll get back to you
-                  soon.
-                </p>
-              </div>
+              <p class="text-xs text-textdim text-center mt-4 italic">
+                After sending, you'll be redirected to a thank‑you page (the
+                page will refresh).
+              </p>
             </div>
           </div>
           <div class="observe-anim anim-fade-up delay-5 text-center mt-16">
@@ -1176,7 +1162,7 @@
         </div>
       </section>
 
-      <!-- FOOTER (unchanged) -->
+      <!-- FOOTER -->
       <footer class="w-full bg-darkcard py-10 border-t border-accentalt/20">
         <div class="max-w-5xl mx-auto px-6 text-center">
           <p
@@ -1246,35 +1232,6 @@
             link.getAttribute("href") === "#" + current,
           ),
         );
-      });
-
-      // Handle Netlify Form submission with AJAX (no page reload, show thank you)
-      const form = document.getElementById("contact-form");
-      const thankYouDiv = document.getElementById("thank-you");
-      const formContainer = document.getElementById("form-container");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => {
-            // Hide form, show thank you message
-            form.style.display = "none";
-            thankYouDiv.classList.remove("hidden");
-            // Optionally reset form if needed
-            form.reset();
-          })
-          .catch((error) => {
-            console.error("Error submitting form:", error);
-            alert(
-              "There was a problem sending your message. Please try again or email me directly.",
-            );
-          });
       });
 
       // Initialize Lucide icons
