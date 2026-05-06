@@ -651,42 +651,66 @@
               <div class="flex items-center gap-3 mb-4">
                 <i data-lucide="shopping-bag" class="w-6 h-6 text-accent"></i>
                 <h3 class="font-display text-xl font-semibold text-text">
-                  E-Commerce Store
+                  FORGE – Full‑Stack E‑Commerce
                 </h3>
               </div>
               <p class="text-sm text-textdim leading-relaxed mb-5">
-                Modern landing page for online store with beautiful layout and
-                optimized user flow.
+                A modern, production‑ready online store built with Django. It includes product variants, stock management, guest cart with session persistence, wishlist, Paystack payment integration, order tracking, PDF invoices, asynchronous email confirmations, and a comprehensive admin dashboard.
               </p>
               <div class="mb-5">
                 <p class="text-xs font-code tracking-wider text-accent mb-2">
-                  [ Features ]
+                  [ Key Features ]
                 </p>
                 <ul class="space-y-1.5">
                   <li class="flex items-center gap-2 text-sm text-textdim">
                     <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Product grid layout
+                    Guest cart + login‑required checkout
                   </li>
                   <li class="flex items-center gap-2 text-sm text-textdim">
                     <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Visual hierarchy
+                    Session‑based wishlist (merges on login)
                   </li>
                   <li class="flex items-center gap-2 text-sm text-textdim">
                     <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    CTA optimization
+                    Paystack payment webhook (cart cleared only on success)
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-textdim">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
+                    Product variants (size/color) with stock
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-textdim">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
+                    Order tracking & PDF invoice download
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-textdim">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
+                    Async email confirmations (Celery + Redis)
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-textdim">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
+                    Admin dashboard with sales stats & order management
                   </li>
                 </ul>
               </div>
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
-                  >HTML</span
+                  >Django</span
                 ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
-                  >CSS</span
+                  >DRF</span
                 ><span
                   class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
-                  >React</span
+                  >PostgreSQL</span
+                ><span
+                  class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
+                  >Redis</span
+                ><span
+                  class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
+                  >Celery</span
+                ><span
+                  class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30"
+                  >Paystack API</span
                 >
               </div>
               <div class="flex gap-4">
@@ -694,17 +718,19 @@
                   href="#"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                  Demo</a
+                  ><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live
+                  Demo (Soon)</a
                 ><a
-                  href="#"
+                  href="https://github.com/Gracey-a/forge_clothing"
                   target="_blank"
                   class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"
-                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a
+                  ><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
+                  (Private)</a
                 >
               </div>
             </div>
 
+            
             <!-- Project 4: Django Blog -->
             <div
               class="observe-anim anim-fade-up delay-5 project-card rounded-sm p-8"
