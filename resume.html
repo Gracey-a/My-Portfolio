@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agho Ivie Gracious – Web Developer resume. Full‑stack projects: Django e‑commerce, real‑time task manager, Django blog. Open for remote work and internships.">
+  <title>Agho Ivie Gracious – Web Developer Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.35;
+      padding: 30px 20px;
+    }
+    .resume {
+      max-width: 1050px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 34% 66%;
+      margin-top: 50px;
+    }
+    /* Sidebar – compact */
+    .sidebar {
+      background: #0f1724;
+      color: #e2e8f0;
+      padding: 1.2rem 1.2rem;
+    }
+    .name-large {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.3rem;
+      color: white;
+    }
+    .title-side {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 0.5rem;
+    }
+    .sidebar h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin: 1rem 0 0.6rem 0;
+      color: #cbd5e1;
+      border-left: 3px solid #3b82f6;
+      padding-left: 8px;
+    }
+    .contact-info p {
+      margin: 0.4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      word-break: break-word;
+    }
+    .contact-info i {
+      width: 20px;
+      color: #3b82f6;
+      font-style: normal;
+      font-weight: 500;
+    }
+    .contact-info a {
+      color: #e2e8f0;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: #3b82f6;
+    }
+    .skill-tag {
+      display: inline-block;
+      background: #1e293b;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      margin: 0.15rem 0.15rem 0 0;
+      font-family: 'JetBrains Mono', monospace;
+      color: #cbd5e1;
+    }
+    .lang-item {
+      margin: 0.5rem 0;
+    }
+    .lang-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .progress-bar {
+      background: #1e293b;
+      height: 4px;
+      border-radius: 10px;
+    }
+    .progress-fill {
+      background: #3b82f6;
+      width: 95%;
+      height: 100%;
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5px;
+    }
+    .badge {
+      background: #1e293b;
+      color: #94a3b8;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      font-weight: 500;
+    }
+    /* Main content – compact */
+    .main {
+      padding: 1.2rem 1.5rem;
+      background: white;
+    }
+    .name-main {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #0f172a;
+      margin-bottom: 0.1rem;
+    }
+    .title-main {
+      font-size: 0.75rem;
+      color: #3b82f6;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+    }
+    .section {
+      margin: 0.7rem 0 0.5rem;
+    }
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 1.5px solid #3b82f6;
+      display: inline-block;
+      padding-bottom: 1px;
+      margin-bottom: 0.4rem;
+    }
+    .project-item {
+      margin-bottom: 0.65rem;
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .project-title a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 0.65rem;
+    }
+    .project-title a:hover {
+      text-decoration: underline;
+    }
+    .project-tech {
+      font-size: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #475569;
+      margin: 2px 0 2px;
+    }
+    .project-desc {
+      font-size: 0.7rem;
+      color: #334155;
+      line-height: 1.3;
+    }
+    .summary-text {
+      font-size: 0.72rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.35;
+    }
+    hr {
+      margin: 0.5rem 0;
+      border: 0;
+      height: 1px;
+      background: #e2e8f0;
+    }
+    @media (max-width: 700px) {
+      .resume { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+      .resume {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        border-radius: 0;
+      }
+      .sidebar {
+        background-color: #0f1724 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .progress-fill, .badge, .skill-tag {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="resume">
+  <div class="sidebar">
+    <div class="name-large">Agho .I.<br>Gracious</div>
+    <div class="title-side">Web Developer</div>
+    <div class="contact-info">
+      <h2>CONTACT</h2>
+      <p><i>📧</i> <a href="mailto:ivieagho29@gmail.com">ivieagho29@gmail.com</a></p>
+      <p><i>📞</i> <a href="https://wa.me/2348143356936" target="_blank" rel="noopener noreferrer">+234 814 335 6936</a></p>
+      <p><i>🌐</i> <a href="https://aghogracious-portfolio.netlify.app" target="_blank" rel="noopener noreferrer">aghogracious-portfolio.netlify.app</a></p>
+      <p><i>🐙</i> <a href="https://github.com/Gracey-a" target="_blank" rel="noopener noreferrer">github.com/Gracey-a</a></p>
+      <p><i>🔗</i> <a href="https://linkedin.com/in/agho-ivie-176bbb262" target="_blank" rel="noopener noreferrer">linkedin.com/in/agho-ivie</a></p>
+      <p><i>📍</i> REMOTE</p>
+    </div>
+    <h2>TECH STACK</h2>
+    <div>
+      <span class="skill-tag">HTML5</span> <span class="skill-tag">CSS3</span> <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">React</span> <span class="skill-tag">Tailwind</span> <span class="skill-tag">Python</span>
+      <span class="skill-tag">Django</span> <span class="skill-tag">DRF</span> <span class="skill-tag">PostgreSQL</span>
+      <span class="skill-tag">Redis</span> <span class="skill-tag">Celery</span> <span class="skill-tag">Git/GitHub</span>
+      <span class="skill-tag">Netlify</span> <span class="skill-tag">Firebase</span> <span class="skill-tag">PWA</span>
+      <span class="skill-tag">Paystack API</span> <span class="skill-tag">Cloudinary</span>
+    </div>
+    <h2>LANGUAGES</h2>
+    <div class="lang-item">
+      <div class="lang-name">English (Professional)</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+    </div>
+    <h2>OPEN TO</h2>
+    <div class="badge-list">
+      <span class="badge">🌍 Remote Jobs</span>
+      <span class="badge">🎓 Internships</span>
+      <span class="badge">⚡ Freelance</span>
+      <span class="badge">🤝 Junior Roles</span>
+    </div>
+  </div>
+  <div class="main">
+    <div class="name-main">Agho .I. Gracious</div>
+    <div class="title-main">Web Developer · Creative Problem Solver · Remote‑ready</div>
+    <div class="section">
+      <div class="section-title">Profile</div>
+      <div class="summary-text">
+        Passionate web developer who builds <strong>real, production‑grade applications</strong> – from full‑stack e‑commerce to real‑time task managers. Certified Full Stack Developer (Bizmarrow, Abuja). I combine clean design with robust back‑end logic and love solving complex problems. <strong>Open to remote internships or junior roles</strong> where I can add value immediately and grow with the team.
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Featured Projects</div>
+      <!-- TaskForce -->
+      <div class="project-item">
+        <div class="project-title">
+          🗓️ TaskForce – Real‑Time Task Manager
+          <span><a href="https://Gracey-a.github.io/Task-manager/" target="_blank" rel="noopener noreferrer">Live →</a> <a href="https://github.com/Gracey-a/Task-manager" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        </div>
+        <div class="project-tech">JavaScript · Firebase · PWA · Quill · IndexedDB</div>
+        <div class="project-desc">Production‑grade task manager with real‑time sync, file attachments, rich‑text descriptions, Pomodoro timer, kanban board, recurring rules (RRULE), offline support, and full PWA capabilities.</div>
+      </div>
+      <!-- AURA E‑Commerce -->
+      <div class="project-item">
+        <div class="project-title">
+          🛍️ AURA – Full‑Stack E‑Commerce
+          <span><a href="https://youtu.be/mBht24gfOQE" target="_blank" rel="noopener noreferrer">Walkthrough →</a> <a href="https://github.com/Gracey-a/forge_clothing" target="_blank" rel="noopener noreferrer">GitHub (Private)</a></span>
+        </div>
+        <div class="project-tech">Django · DRF · PostgreSQL · Redis · Celery · Paystack · Tailwind</div>
+        <div class="project-desc">Full‑featured women's fashion store: guest cart + login‑required checkout, wishlist merge, Paystack webhook, product variants with stock, order tracking, PDF invoices, async email confirmations, and admin dashboard with sales stats.</div>
+      </div>
+      <!-- Django Blog -->
+      <div class="project-item">
+        <div class="project-title">
+          📝 Elegant Django Blog
+          <span><a href="https://django-blog-52oj.onrender.com" target="_blank" rel="noopener noreferrer">Live →</a> <a href="https://github.com/Gracey-a/Django-blog" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        </div>
+        <div class="project-tech">Django · Python · PostgreSQL · Tailwind · Cloudinary · Render</div>
+        <div class="project-desc">Production blog platform: auth, rich text editing, post scheduling, comments/likes, categories/tags, persistent image hosting, dark/light mode, magazine‑style layout.</div>
+      </div>
+      <!-- Coffee Shop -->
+      <div class="project-item">
+        <div class="project-title">
+          ☕ Hivey's Brew – Coffee Shop
+          <span><a href="https://gracey-a.github.io/coffee-shop-website/" target="_blank" rel="noopener noreferrer">Demo →</a> <a href="https://github.com/gracey-a/coffee-shop-website" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        </div>
+        <div class="project-tech">HTML5 · CSS3 · JavaScript · LocalStorage</div>
+        <div class="project-desc">Fully responsive coffee shop site with shopping cart, blog, events page, and interactive gallery. Deployed via GitHub Pages.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Education & Learning</div>
+      <div class="summary-text">
+        <strong>Full Stack Development Certification</strong> – Bizmarrow Technologies, Abuja (intensive front‑end & back‑end program)<br>
+        <strong>Self‑directed learner</strong> – continuously building full‑stack apps, exploring advanced Django, React, Celery/Redis, and CI/CD (Netlify, Render).
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Why Hire Me?</div>
+      <div class="summary-text">
+        ✅ <strong>Ship real code:</strong> every project is live, functional, and production‑aware.<br>
+        ✅ <strong>Fast & autonomous:</strong> mastered full‑stack tools, cloud deployment, and async workflows.<br>
+        ✅ <strong>Detail & UX:</strong> obsessed with clean interfaces, accessibility, and performance.<br>
+        ✅ <strong>Remote ready:</strong> excellent communication, self‑starter, comfortable with async collaboration.
+      </div>
+    </div>
+    <hr>
+    <div style="font-size: 0.65rem; text-align: center; color: #475569; padding-bottom: 0.2rem;">
+      🌍 Open to remote worldwide · References and portfolio available upon request
+    </div>
+  </div>
+</div>
+</body>
+</html>
