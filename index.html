@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Agho Ivie Gracious – Web Developer portfolio showcasing real‑world projects like full‑stack e‑commerce, real‑time task manager, and Django blog. Open for remote work and internships." />
+    <meta name="keywords" content="web developer, portfolio, Django, React, remote, Nigeria, full‑stack, Agho Ivie Gracious" />
     <title>Agho Ivie Gracious — Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
@@ -28,49 +30,20 @@
       };
     </script>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .font-display {
-        font-family: "Space Mono", monospace;
-      }
-      .font-code {
-        font-family: "JetBrains Mono", monospace;
-      }
-      .font-body {
-        font-family: "Poppins", sans-serif;
-      }
-      .observe-anim {
-        opacity: 1;
-      }
-      .observe-anim.visible {
-        opacity: 1;
-      }
-      .glow-accent {
-        box-shadow: 0 0 20px #9b7ba811;
-      }
-      .glow-accent:hover {
-        box-shadow: 0 0 30px #9b7ba822;
-      }
-      .glow-border {
-        border: 1px solid #9b7ba844;
-      }
-      .code-border {
-        border: 1px solid #9b7ba844;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0e27;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #6366f1;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #00d4ff;
-      }
+      html { scroll-behavior: smooth; }
+      .font-display { font-family: "Space Mono", monospace; }
+      .font-code { font-family: "JetBrains Mono", monospace; }
+      .font-body { font-family: "Poppins", sans-serif; }
+      .observe-anim { opacity: 1; }
+      .observe-anim.visible { opacity: 1; }
+      .glow-accent { box-shadow: 0 0 20px #9b7ba811; }
+      .glow-accent:hover { box-shadow: 0 0 30px #9b7ba822; }
+      .glow-border { border: 1px solid #9b7ba844; }
+      .code-border { border: 1px solid #9b7ba844; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #0a0e27; }
+      ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #00d4ff; }
       .hero-image-placeholder {
         background: radial-gradient(circle, #1a0f1f 0%, #0a0608 100%);
         position: relative;
@@ -86,11 +59,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(
-          circle at 30% 30%,
-          #9b7ba811,
-          transparent 60%
-        );
+        background: radial-gradient(circle at 30% 30%, #9b7ba811, transparent 60%);
       }
       .hero-image-placeholder::after {
         content: "";
@@ -179,9 +148,7 @@
         transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
       .nav-link:hover::after,
-      .nav-link.active::after {
-        width: 100%;
-      }
+      .nav-link.active::after { width: 100%; }
       .btn-primary {
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         border: 1px solid #9b7ba8;
@@ -192,9 +159,7 @@
         box-shadow: 0 0 20px #9b7ba822;
         transform: translateY(-2px);
       }
-      .btn-primary:active {
-        transform: translateY(0);
-      }
+      .btn-primary:active { transform: translateY(0); }
       .btn-secondary {
         transition: all 0.3s ease;
         border: 1px solid #9b7ba844;
@@ -212,1046 +177,235 @@
         overflow: hidden;
       }
       .pattern-grid {
-        background-image:
-          linear-gradient(#9b7ba80a 1px, transparent 1px),
+        background-image: linear-gradient(#9b7ba80a 1px, transparent 1px),
           linear-gradient(90deg, #9b7ba80a 1px, transparent 1px);
         background-size: 50px 50px;
       }
-      body {
-        box-sizing: border-box;
-      }
+      body { box-sizing: border-box; }
     </style>
   </head>
   <body class="h-full font-body bg-darkbg text-text">
     <div id="app-wrapper" class="w-full h-full overflow-auto">
-      <!-- NAVIGATION -->
+      <!-- NAVIGATION (unchanged) -->
       <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-blur">
-        <div
-          class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
-        >
-          <a
-            href="#hero"
-            class="font-display text-2xl font-bold tracking-widest text-accent anim-glow"
-            id="nav-brand"
-            >&lt;A.I.G /&gt;</a
-          >
-          <button
-            id="mobile-toggle"
-            class="md:hidden text-text"
-            aria-label="Toggle menu"
-          >
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
-          <div
-            id="nav-links"
-            class="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest uppercase"
-          >
-            <a href="#hero" class="nav-link text-text hover:text-accent"
-              >Home</a
-            >
-            <a href="#about" class="nav-link text-text hover:text-accent"
-              >About</a
-            >
-            <a href="#projects" class="nav-link text-text hover:text-accent"
-              >Projects</a
-            >
-            <a href="#funfacts" class="nav-link text-text hover:text-accent"
-              >Fun Facts</a
-            >
-            <a href="#expertise" class="nav-link text-text hover:text-accent"
-              >Expertise</a
-            >
-            <a href="#contact" class="nav-link text-text hover:text-accent"
-              >Contact</a
-            >
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#hero" class="font-display text-2xl font-bold tracking-widest text-accent anim-glow" id="nav-brand">&lt;A.I.G /&gt;</a>
+          <button id="mobile-toggle" class="md:hidden text-text" aria-label="Toggle menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+          <div id="nav-links" class="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest uppercase">
+            <a href="#hero" class="nav-link text-text hover:text-accent">Home</a>
+            <a href="#about" class="nav-link text-text hover:text-accent">About</a>
+            <a href="#projects" class="nav-link text-text hover:text-accent">Projects</a>
+            <a href="#funfacts" class="nav-link text-text hover:text-accent">Fun Facts</a>
+            <a href="#expertise" class="nav-link text-text hover:text-accent">Expertise</a>
+            <a href="#contact" class="nav-link text-text hover:text-accent">Contact</a>
           </div>
         </div>
-        <div
-          id="mobile-menu"
-          class="hidden md:hidden bg-darkbg/95 nav-blur px-6 py-4"
-        >
-          <div
-            class="flex flex-col gap-4 text-xs font-medium tracking-widest uppercase"
-          >
-            <a href="#hero" class="nav-link text-text hover:text-accent py-2"
-              >Home</a
-            >
-            <a href="#about" class="nav-link text-text hover:text-accent py-2"
-              >About</a
-            >
-            <a
-              href="#projects"
-              class="nav-link text-text hover:text-accent py-2"
-              >Projects</a
-            >
-            <a
-              href="#funfacts"
-              class="nav-link text-text hover:text-accent py-2"
-              >Fun Facts</a
-            >
-            <a
-              href="#expertise"
-              class="nav-link text-text hover:text-accent py-2"
-              >Expertise</a
-            >
-            <a href="#contact" class="nav-link text-text hover:text-accent py-2"
-              >Contact</a
-            >
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbg/95 nav-blur px-6 py-4">
+          <div class="flex flex-col gap-4 text-xs font-medium tracking-widest uppercase">
+            <a href="#hero" class="nav-link text-text hover:text-accent py-2">Home</a>
+            <a href="#about" class="nav-link text-text hover:text-accent py-2">About</a>
+            <a href="#projects" class="nav-link text-text hover:text-accent py-2">Projects</a>
+            <a href="#funfacts" class="nav-link text-text hover:text-accent py-2">Fun Facts</a>
+            <a href="#expertise" class="nav-link text-text hover:text-accent py-2">Expertise</a>
+            <a href="#contact" class="nav-link text-text hover:text-accent py-2">Contact</a>
           </div>
         </div>
       </nav>
 
-      <!-- HERO SECTION -->
-      <section
-        id="hero"
-        class="relative w-full min-h-full flex items-center bg-darkbg pattern-grid overflow-hidden"
-      >
+      <!-- HERO SECTION (added Download Resume button) -->
+      <section id="hero" class="relative w-full min-h-full flex items-center bg-darkbg pattern-grid overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 py-32 md:py-0 w-full">
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1 z-10">
-              <div class="observe-anim anim-fade-up delay-1">
-                <p
-                  class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-6"
-                >
-                  &gt; web_developer.init()
-                </p>
-              </div>
-              <h1
-                id="hero-name"
-                class="observe-anim anim-fade-up delay-2 font-display text-4xl md:text-6xl font-bold leading-[1.1] text-text mb-4 anim-glow tracking-wider"
-              >
-                Agho .I.<br />Gracious
-              </h1>
-              <p
-                id="hero-tagline"
-                class="observe-anim anim-fade-up delay-3 text-sm tracking-[0.2em] text-textdim mb-6 font-code"
-              >
-                // Web Developer • Creative Thinker • Tech Innovator
-              </p>
-              <p
-                class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed max-w-md mb-8"
-              >
-                I design and build modern, responsive websites combining
-                creativity with clean code. Open to remote opportunities and
-                internships.
-              </p>
-              <p
-                id="hero-cta"
-                class="observe-anim anim-fade-up delay-5 font-code text-lg text-accent mb-8 italic"
-              >
-                "Let's build something amazing together."
-              </p>
-              <div
-                class="observe-anim anim-fade-up delay-6 flex flex-wrap gap-4"
-              >
-                <a
-                  href="#contact"
-                  class="inline-flex items-center gap-2 btn-primary text-white px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"
-                  ><i data-lucide="send" class="w-4 h-4"></i> Let's Connect</a
-                >
-                <a
-                  href="#projects"
-                  class="inline-flex items-center gap-2 btn-secondary text-accent px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"
-                  ><i data-lucide="code-2" class="w-4 h-4"></i> View Work</a
-                >
+              <div class="observe-anim anim-fade-up delay-1"><p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-6">&gt; web_developer.init()</p></div>
+              <h1 id="hero-name" class="observe-anim anim-fade-up delay-2 font-display text-4xl md:text-6xl font-bold leading-[1.1] text-text mb-4 anim-glow tracking-wider">Agho .I.<br />Gracious</h1>
+              <p id="hero-tagline" class="observe-anim anim-fade-up delay-3 text-sm tracking-[0.2em] text-textdim mb-6 font-code">// Web Developer • Creative Thinker • Tech Innovator</p>
+              <p class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed max-w-md mb-8">I design and build modern, responsive websites combining creativity with clean code. Open to remote opportunities and internships.</p>
+              <p id="hero-cta" class="observe-anim anim-fade-up delay-5 font-code text-lg text-accent mb-8 italic">"Let's build something amazing together."</p>
+              <div class="observe-anim anim-fade-up delay-6 flex flex-wrap gap-4">
+                <a href="#contact" class="inline-flex items-center gap-2 btn-primary text-white px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"><i data-lucide="send" class="w-4 h-4"></i> Let's Connect</a>
+                <a href="#projects" class="inline-flex items-center gap-2 btn-secondary text-accent px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm"><i data-lucide="code-2" class="w-4 h-4"></i> View Work</a>
+                <!-- Download Resume button (NEW) -->
+                <a href="Agho_Ivie_Gracious_Resume.pdf" download class="inline-flex items-center gap-2 btn-secondary text-accent px-6 py-3 text-xs font-medium tracking-wider uppercase rounded-sm">
+                  <i data-lucide="file-text" class="w-4 h-4"></i> Download Resume
+                </a>
               </div>
             </div>
-            <div
-              class="order-1 md:order-2 flex justify-center md:justify-end relative"
-            >
-              <div
-                class="observe-anim anim-float delay-3 hero-image-placeholder rounded-full shadow-2xl flex items-center justify-center glow-accent overflow-hidden"
-              >
-                <img
-                  src="Profile.png"
-                  alt="Agho Ivie Gracious"
-                  class="w-full h-full object-cover"
-                  style="transform: scale(1.05)"
-                />
+            <div class="order-1 md:order-2 flex justify-center md:justify-end relative">
+              <div class="observe-anim anim-float delay-3 hero-image-placeholder rounded-full shadow-2xl flex items-center justify-center glow-accent overflow-hidden">
+                <img src="Profile.png" alt="Agho Ivie Gracious" class="w-full h-full object-cover" style="transform: scale(1.05)" />
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="absolute bottom-8 left-1/2 -translate-x-1/2 observe-anim anim-fade-in delay-7"
-        >
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 observe-anim anim-fade-in delay-7">
           <div class="flex flex-col items-center gap-2 text-textdim">
-            <span class="text-[10px] tracking-[0.3em] uppercase"
-              >Scroll to explore</span
-            >
-            <i
-              data-lucide="chevron-down"
-              class="w-4 h-4 animate-bounce text-accent"
-            ></i>
+            <span class="text-[10px] tracking-[0.3em] uppercase">Scroll to explore</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-accent"></i>
           </div>
         </div>
       </section>
 
-      <!-- ABOUT SECTION -->
-      <section
-        id="about"
-        class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
-      >
+      <!-- ABOUT SECTION (unchanged) -->
+      <section id="about" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
         <div class="max-w-5xl mx-auto px-6">
           <div class="grid md:grid-cols-3 gap-12 items-start">
-            <div
-              class="md:col-span-1 flex flex-col items-center md:items-start"
-            >
-              <div
-                class="observe-anim anim-scale-in about-image-placeholder flex items-center justify-center overflow-hidden rounded-full mb-6"
-              >
-                <img
-                  src="profile2.png"
-                  alt="Agho Ivie Gracious face"
-                  class="w-full h-full object-cover"
-                  style="transform: scale(1.1)"
-                />
+            <div class="md:col-span-1 flex flex-col items-center md:items-start">
+              <div class="observe-anim anim-scale-in about-image-placeholder flex items-center justify-center overflow-hidden rounded-full mb-6">
+                <img src="profile2.png" alt="Agho Ivie Gracious face" class="w-full h-full object-cover" style="transform: scale(1.1)" />
               </div>
-              <p
-                class="observe-anim anim-fade-up delay-1 text-xs font-code tracking-widest text-accent mb-2"
-              >
-                &lt;/about&gt;
-              </p>
-              <h2
-                id="about-heading"
-                class="observe-anim anim-fade-up delay-2 font-display text-4xl md:text-5xl font-bold text-text leading-tight"
-              >
-                About Me
-              </h2>
+              <p class="observe-anim anim-fade-up delay-1 text-xs font-code tracking-widest text-accent mb-2">&lt;/about&gt;</p>
+              <h2 id="about-heading" class="observe-anim anim-fade-up delay-2 font-display text-4xl md:text-5xl font-bold text-text leading-tight">About Me</h2>
             </div>
             <div class="md:col-span-2 space-y-5">
-              <p
-                class="observe-anim anim-fade-up delay-2 text-base text-text leading-relaxed"
-              >
-                Hi, I'm
-                <span class="font-semibold text-accent">Agho Ivie Gracious</span
-                >, a passionate and detail-oriented web developer with a strong
-                interest in creating visually appealing and functional websites.
-              </p>
-              <p
-                class="observe-anim anim-fade-up delay-3 text-base text-text leading-relaxed"
-              >
-                I'm at the early stage of my professional journey, but I've
-                dedicated myself to learning, building, and improving my skills
-                through hands-on projects. I love turning ideas into digital
-                experiences with clean, modern interfaces.
-              </p>
-              <p
-                class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed font-code text-sm"
-              >
-                Currently seeking:
-              </p>
+              <p class="observe-anim anim-fade-up delay-2 text-base text-text leading-relaxed">Hi, I'm <span class="font-semibold text-accent">Agho Ivie Gracious</span>, a passionate and detail-oriented web developer with a strong interest in creating visually appealing and functional websites.</p>
+              <p class="observe-anim anim-fade-up delay-3 text-base text-text leading-relaxed">I'm at the early stage of my professional journey, but I've dedicated myself to learning, building, and improving my skills through hands-on projects. I love turning ideas into digital experiences with clean, modern interfaces.</p>
+              <p class="observe-anim anim-fade-up delay-4 text-base text-text leading-relaxed font-code text-sm">Currently seeking:</p>
               <ul class="observe-anim anim-fade-up delay-5 space-y-3 pl-1">
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold">→</span>
-                  <span class="text-base text-text"
-                    >Remote job opportunities</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold">→</span>
-                  <span class="text-base text-text"
-                    >Meaningful internship roles</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold">→</span>
-                  <span class="text-base text-text"
-                    >Growth alongside experienced developers</span
-                  >
-                </li>
+                <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Remote job opportunities</span></li>
+                <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Meaningful internship roles</span></li>
+                <li class="flex items-start gap-3"><span class="text-accent font-bold">→</span> <span class="text-base text-text">Growth alongside experienced developers</span></li>
               </ul>
-              <div
-                class="observe-anim anim-fade-up delay-6 pt-4 border-l-2 border-accent/30 pl-6 code-snippet p-4 rounded-sm"
-              >
+              <div class="observe-anim anim-fade-up delay-6 pt-4 border-l-2 border-accent/30 pl-6 code-snippet p-4 rounded-sm">
                 <p class="font-code text-sm text-accent">const philosophy =</p>
-                <p class="font-code text-sm text-textdim italic">
-                  "Consistency, creativity,<br />continuous learning"
-                </p>
+                <p class="font-code text-sm text-textdim italic">"Consistency, creativity,<br />continuous learning"</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PROJECTS SECTION -->
-      <section
-        id="projects"
-        class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
-      >
+      <!-- PROJECTS SECTION (unchanged, all links are correct) -->
+      <section id="projects" class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid">
         <div class="max-w-5xl mx-auto px-6">
           <div class="text-center mb-16">
-            <p
-              class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3"
-            >
-              &gt; projects.map()
-            </p>
-            <h2
-              class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4"
-            >
-              Projects Catalog
-            </h2>
-            <p
-              class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-xl mx-auto"
-            >
-              Here are projects I've built while learning and developing my
-              skills. Each reflects my growth and creativity.
-            </p>
+            <p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; projects.map()</p>
+            <h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Projects Catalog</h2>
+            <p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-xl mx-auto">Here are projects I've built while learning and developing my skills. Each reflects my growth and creativity.</p>
           </div>
-
           <div class="grid md:grid-cols-2 gap-8">
-            <!-- Project 1: Coffee Shop -->
+            <!-- Project 1: Coffee Shop (unchanged) -->
             <div class="observe-anim anim-fade-up delay-2 project-card rounded-sm p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-3xl">☕</span>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  Hivey's Brew – Coffee Shop
-                </h3>
-              </div>
-              <p class="text-sm text-textdim leading-relaxed mb-5">
-                Fully responsive coffee shop website with online ordering,
-                shopping cart, blog, events page, and interactive gallery.
-              </p>
-              <div class="mb-5">
-                <p class="text-xs font-code tracking-wider text-accent mb-2">
-                  [ Features ]
-                </p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Shopping cart system
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Blog & events pages
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Photo gallery slider
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  HTML5
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  CSS3
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  JavaScript
-                </span>
-              </div>
-              <div class="flex gap-4">
-                <a
-                  href="https://gracey-a.github.io/coffee-shop-website/"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> 
-                  Live Demo
-                </a>
-                <a
-                  href="https://github.com/gracey-a/coffee-shop-website"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                  GitHub
-                </a>
-              </div>
+              <div class="flex items-center gap-3 mb-4"><span class="text-3xl">☕</span><h3 class="font-display text-xl font-semibold text-text">Hivey's Brew – Coffee Shop</h3></div>
+              <p class="text-sm text-textdim leading-relaxed mb-5">Fully responsive coffee shop website with online ordering, shopping cart, blog, events page, and interactive gallery.</p>
+              <div class="mb-5"><p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p><ul class="space-y-1.5"><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Shopping cart system</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Blog & events pages</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Photo gallery slider</li></ul></div>
+              <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">HTML5</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">CSS3</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">JavaScript</span></div>
+              <div class="flex gap-4"><a href="https://gracey-a.github.io/coffee-shop-website/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo</a><a href="https://github.com/gracey-a/coffee-shop-website" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a></div>
             </div>
-
-            <!-- Project 2: TaskForce Ultimate -->
+            <!-- Project 2: TaskForce (unchanged) -->
             <div class="observe-anim anim-fade-up delay-3 project-card rounded-sm p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-3xl">🗓️</span>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  TaskForce – Task Manager
-                </h3>
-              </div>
-              <p class="text-sm text-textdim leading-relaxed mb-5">
-                Production‑grade task manager with real‑time collaboration, file
-                attachments, rich‑text descriptions, time tracking, custom
-                recurring rules, offline support, and full PWA capabilities.
-              </p>
-              <div class="mb-5">
-                <p class="text-xs font-code tracking-wider text-accent mb-2">
-                  [ Features ]
-                </p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Cloud sync (Firebase) + real‑time sharing
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    File & image attachments (PDF, images, docs)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Rich‑text descriptions (Quill editor)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Pomodoro timer, time tracking per task
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Kanban board, focus mode, keyboard shortcuts
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Custom recurring rules (RRULE), offline IndexedDB
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  HTML5
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  CSS3
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  JavaScript
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Firebase
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  PWA
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Quill
-                </span>
-              </div>
-              <div class="flex gap-4">
-                <a
-                  href="https://Gracey-a.github.io/Task-manager/"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> 
-                  Live Demo
-                </a>
-                <a
-                  href="https://github.com/Gracey-a/Task-manager"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> 
-                  GitHub
-                </a>
-              </div>
+              <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🗓️</span><h3 class="font-display text-xl font-semibold text-text">TaskForce – Task Manager</h3></div>
+              <p class="text-sm text-textdim leading-relaxed mb-5">Production‑grade task manager with real‑time collaboration, file attachments, rich‑text descriptions, time tracking, custom recurring rules, offline support, and full PWA capabilities.</p>
+              <div class="mb-5"><p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p><ul class="space-y-1.5"><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Cloud sync (Firebase) + real‑time sharing</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> File & image attachments (PDF, images, docs)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Rich‑text descriptions (Quill editor)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Pomodoro timer, time tracking per task</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Kanban board, focus mode, keyboard shortcuts</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Custom recurring rules (RRULE), offline IndexedDB</li></ul></div>
+              <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">HTML5</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">CSS3</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">JavaScript</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Firebase</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">PWA</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Quill</span></div>
+              <div class="flex gap-4"><a href="https://Gracey-a.github.io/Task-manager/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo</a><a href="https://github.com/Gracey-a/Task-manager" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a></div>
             </div>
-            
-            <!-- Project 3: AURA -->
+            <!-- Project 3: AURA (unchanged) -->
             <div class="observe-anim anim-fade-up delay-4 project-card rounded-sm p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-3xl">🛍️</span>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  AURA – Full‑Stack E‑Commerce
-                </h3>
-              </div>
-              <p class="text-sm text-textdim leading-relaxed mb-5">
-                A modern, production‑ready online store for women’s fashion. Features guest cart + login‑required checkout, session‑based wishlist (merges on login), Paystack payment webhook, product variants (size/colour) with stock, order tracking, PDF invoices, async email confirmations (Celery + Redis), and a comprehensive admin dashboard with sales stats. Fully responsive design.
-              </p>
-              <div class="mb-5">
-                <p class="text-xs font-code tracking-wider text-accent mb-2">
-                  [ Key Features ]
-                </p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Guest cart + login‑required checkout
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Session‑based wishlist (merges on login)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Paystack payment webhook (cart cleared only on success)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Product variants (size/color) with stock
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Order tracking & PDF invoice download
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Async email confirmations (Celery + Redis)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Admin dashboard with sales stats & order management
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Django
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  DRF
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  PostgreSQL
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Redis
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Celery
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Paystack API
-                </span>
-              </div>
-              <div class="flex gap-4">
-                <a
-                  href="https://youtu.be/mBht24gfOQE"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i> 
-                  Full Walkthrough
-                </a>
-                <a
-                  href="https://github.com/Gracey-a/forge_clothing"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> 
-                  GitHub (Private)
-                </a>
-              </div>
+              <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🛍️</span><h3 class="font-display text-xl font-semibold text-text">AURA – Full‑Stack E‑Commerce</h3></div>
+              <p class="text-sm text-textdim leading-relaxed mb-5">A modern, production‑ready online store for women’s fashion. Features guest cart + login‑required checkout, session‑based wishlist (merges on login), Paystack payment webhook, product variants (size/colour) with stock, order tracking, PDF invoices, async email confirmations (Celery + Redis), and a comprehensive admin dashboard with sales stats. Fully responsive design.</p>
+              <div class="mb-5"><p class="text-xs font-code tracking-wider text-accent mb-2">[ Key Features ]</p><ul class="space-y-1.5"><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Guest cart + login‑required checkout</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Session‑based wishlist (merges on login)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Paystack payment webhook (cart cleared only on success)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Product variants (size/color) with stock</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Order tracking & PDF invoice download</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Async email confirmations (Celery + Redis)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Admin dashboard with sales stats & order management</li></ul></div>
+              <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Django</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">DRF</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">PostgreSQL</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Redis</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Celery</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Paystack API</span></div>
+              <div class="flex gap-4"><a href="https://youtu.be/mBht24gfOQE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Full Walkthrough</a><a href="https://github.com/Gracey-a/forge_clothing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub (Private)</a></div>
             </div>
-            
-            <!-- Project 4: Django Blog -->
+            <!-- Project 4: Django Blog (unchanged) -->
             <div class="observe-anim anim-fade-up delay-5 project-card rounded-sm p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-3xl">📝</span>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  Elegant Django Blog
-                </h3>
-              </div>
-              <p class="text-sm text-textdim leading-relaxed mb-5">
-                A full‑featured, production‑ready blog platform with user
-                authentication, rich text editing, post scheduling, comments,
-                likes, categories, tags, persistent image hosting via
-                Cloudinary, and a responsive dark/light magazine‑style layout.
-              </p>
-              <div class="mb-5">
-                <p class="text-xs font-code tracking-wider text-accent mb-2">
-                  [ Features ]
-                </p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Registration & login (JWT / sessions)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Post scheduling & draft system
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Image upload with Cloudinary (persistent)
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    CKEditor rich text, tags, categories, comments & likes
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-textdim">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i>
-                    Dark/light mode toggle, 2‑column magazine homepage
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Django
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Python
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Tailwind CSS
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  PostgreSQL
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Cloudinary
-                </span>
-                <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">
-                  Render
-                </span>
-              </div>
-              <div class="flex gap-4">
-                <a
-                  href="https://django-blog-52oj.onrender.com"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                  Live Blog
-                </a>
-                <a
-                  href="https://github.com/Gracey-a/Django-blog"
-                  target="_blank"
-                  class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i> 
-                  GitHub
-                </a>
-              </div>
+              <div class="flex items-center gap-3 mb-4"><span class="text-3xl">📝</span><h3 class="font-display text-xl font-semibold text-text">Elegant Django Blog</h3></div>
+              <p class="text-sm text-textdim leading-relaxed mb-5">A full‑featured, production‑ready blog platform with user authentication, rich text editing, post scheduling, comments, likes, categories, tags, persistent image hosting via Cloudinary, and a responsive dark/light magazine‑style layout.</p>
+              <div class="mb-5"><p class="text-xs font-code tracking-wider text-accent mb-2">[ Features ]</p><ul class="space-y-1.5"><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Registration & login (JWT / sessions)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Post scheduling & draft system</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Image upload with Cloudinary (persistent)</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> CKEditor rich text, tags, categories, comments & likes</li><li class="flex items-center gap-2 text-sm text-textdim"><i data-lucide="check" class="w-3.5 h-3.5 text-accent"></i> Dark/light mode toggle, 2‑column magazine homepage</li></ul></div>
+              <div class="flex flex-wrap gap-2 mb-6"><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Django</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Python</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Tailwind CSS</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">PostgreSQL</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Cloudinary</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Render</span></div>
+              <div class="flex gap-4"><a href="https://django-blog-52oj.onrender.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Blog</a><a href="https://github.com/Gracey-a/Django-blog" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub</a></div>
             </div>
-            <!-- More Projects placeholder -->
+            <!-- More placeholder -->
             <div class="observe-anim anim-fade-up delay-5 border-2 border-dashed code-border rounded-sm p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
-              <div class="w-12 h-12 bg-accentalt/10 rounded-full flex items-center justify-center mb-4 border border-accentalt/30">
-                <i data-lucide="plus" class="w-6 h-6 text-accentalt"></i>
-              </div>
-              <p class="font-display text-xl font-semibold text-text mb-2">
-                More Coming Soon
-              </p>
-              <p class="text-sm text-textdim">
-                Building new projects<br />Check back soon!
-              </p>
+              <div class="w-12 h-12 bg-accentalt/10 rounded-full flex items-center justify-center mb-4 border border-accentalt/30"><i data-lucide="plus" class="w-6 h-6 text-accentalt"></i></div>
+              <p class="font-display text-xl font-semibold text-text mb-2">More Coming Soon</p>
+              <p class="text-sm text-textdim">Building new projects<br />Check back soon!</p>
             </div>
           </div>
         </div>
       </section>
-      
-      <!-- FUN FACTS -->
-      <section
-        id="funfacts"
-        class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
-      >
+
+      <!-- FUN FACTS (unchanged) -->
+      <section id="funfacts" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
         <div class="max-w-5xl mx-auto px-6">
-          <div class="text-center mb-16">
-            <p
-              class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3"
-            >
-              &gt; personality.traits
-            </p>
-            <h2
-              class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4"
-            >
-              Fun Facts
-            </h2>
-            <p
-              class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto"
-            >
-              Get to know me beyond the code — great partnerships start with
-              real connections.
-            </p>
-          </div>
+          <div class="text-center mb-16"><p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; personality.traits</p><h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Fun Facts</h2><p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto">Get to know me beyond the code — great partnerships start with real connections.</p></div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div
-              class="observe-anim anim-fade-up delay-1 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">✨</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I love creating visually aesthetic and well-structured designs
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-2 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">💻</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I enjoy bringing ideas to life through code
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-3 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">🌍</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I dream of working with global teams remotely
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-4 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">📚</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I'm constantly learning and improving
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-5 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">🎯</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I'm very detail-oriented and thorough
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-6 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">🎨</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I have a creative side that influences design
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center"
-            >
-              <div class="text-4xl mb-3">⚡</div>
-              <p class="text-sm text-textdim leading-relaxed">
-                I enjoy solving problems creatively
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center flex items-center justify-center glow-border"
-            >
-              <p class="font-display italic text-sm text-accent leading-snug">
-                "I don't just build websites — I create experiences."
-              </p>
-            </div>
+            <div class="observe-anim anim-fade-up delay-1 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">✨</div><p class="text-sm text-textdim leading-relaxed">I love creating visually aesthetic and well-structured designs</p></div>
+            <div class="observe-anim anim-fade-up delay-2 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">💻</div><p class="text-sm text-textdim leading-relaxed">I enjoy bringing ideas to life through code</p></div>
+            <div class="observe-anim anim-fade-up delay-3 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">🌍</div><p class="text-sm text-textdim leading-relaxed">I dream of working with global teams remotely</p></div>
+            <div class="observe-anim anim-fade-up delay-4 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">📚</div><p class="text-sm text-textdim leading-relaxed">I'm constantly learning and improving</p></div>
+            <div class="observe-anim anim-fade-up delay-5 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">🎯</div><p class="text-sm text-textdim leading-relaxed">I'm very detail-oriented and thorough</p></div>
+            <div class="observe-anim anim-fade-up delay-6 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">🎨</div><p class="text-sm text-textdim leading-relaxed">I have a creative side that influences design</p></div>
+            <div class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center"><div class="text-4xl mb-3">⚡</div><p class="text-sm text-textdim leading-relaxed">I enjoy solving problems creatively</p></div>
+            <div class="observe-anim anim-fade-up delay-7 fun-card rounded-sm p-6 text-center flex items-center justify-center glow-border"><p class="font-display italic text-sm text-accent leading-snug">"I don't just build websites — I create experiences."</p></div>
           </div>
         </div>
       </section>
 
-      <!-- EXPERTISE SECTION -->
-      <section
-        id="expertise"
-        class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid"
-      >
+      <!-- EXPERTISE SECTION (unchanged) -->
+      <section id="expertise" class="relative w-full bg-darkbg py-24 md:py-32 pattern-grid">
         <div class="max-w-5xl mx-auto px-6">
-          <div class="text-center mb-16">
-            <p
-              class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3"
-            >
-              &gt; skills.display()
-            </p>
-            <h2
-              class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4"
-            >
-              Learning &amp; Expertise
-            </h2>
-          </div>
+          <div class="text-center mb-16"><p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; skills.display()</p><h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Learning &amp; Expertise</h2></div>
           <div class="grid md:grid-cols-3 gap-10">
-            <div
-              class="observe-anim anim-slide-left delay-2 glow-border rounded-sm p-6"
-            >
-              <div class="flex items-center gap-3 mb-5">
-                <i data-lucide="graduation-cap" class="w-6 h-6 text-accent"></i>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  Where I Learned
-                </h3>
-              </div>
-              <p class="text-sm text-textdim leading-relaxed mb-4">
-                Completed
-                <span class="text-accent font-semibold"
-                  >Full Stack Development</span
-                >
-                program at
-                <span class="text-accent font-semibold"
-                  >Bizmarrow Technologies, Abuja</span
-                >
-                with foundational web development knowledge.
-              </p>
-              <p class="text-sm text-textdim leading-relaxed">
-                Continued learning through independent practice, projects, and
-                online resources.
-              </p>
-            </div>
-            <div
-              class="observe-anim anim-slide-left delay-3 glow-border rounded-sm p-6"
-            >
-              <div class="flex items-center gap-3 mb-5">
-                <i data-lucide="code-2" class="w-6 h-6 text-accent"></i>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  My Expertise
-                </h3>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >HTML</span
-                ><span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >CSS</span
-                ><span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >JavaScript</span
-                ><span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >Python</span
-                ><span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >Django</span
-                ><span
-                  class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent"
-                  >Responsive</span
-                >
-              </div>
-            </div>
-            <div
-              class="observe-anim anim-slide-left delay-4 glow-border rounded-sm p-6"
-            >
-              <div class="flex items-center gap-3 mb-5">
-                <i data-lucide="trending-up" class="w-6 h-6 text-accent"></i>
-                <h3 class="font-display text-xl font-semibold text-text">
-                  Currently Working On
-                </h3>
-              </div>
-              <ul class="space-y-3">
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span
-                  ><span class="text-sm text-textdim"
-                    >Improving React skills</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span
-                  ><span class="text-sm text-textdim"
-                    >Building real-world projects</span
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-accent font-bold mt-1">→</span
-                  ><span class="text-sm text-textdim"
-                    >Strengthening problem-solving</span
-                  >
-                </li>
-              </ul>
-            </div>
+            <div class="observe-anim anim-slide-left delay-2 glow-border rounded-sm p-6"><div class="flex items-center gap-3 mb-5"><i data-lucide="graduation-cap" class="w-6 h-6 text-accent"></i><h3 class="font-display text-xl font-semibold text-text">Where I Learned</h3></div><p class="text-sm text-textdim leading-relaxed mb-4">Completed <span class="text-accent font-semibold">Full Stack Development</span> program at <span class="text-accent font-semibold">Bizmarrow Technologies, Abuja</span> with foundational web development knowledge.</p><p class="text-sm text-textdim leading-relaxed">Continued learning through independent practice, projects, and online resources.</p></div>
+            <div class="observe-anim anim-slide-left delay-3 glow-border rounded-sm p-6"><div class="flex items-center gap-3 mb-5"><i data-lucide="code-2" class="w-6 h-6 text-accent"></i><h3 class="font-display text-xl font-semibold text-text">My Expertise</h3></div><div class="flex flex-wrap gap-2"><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">HTML</span><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">CSS</span><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">JavaScript</span><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Python</span><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Django</span><span class="skill-tag text-xs font-code tracking-wider uppercase px-4 py-2 rounded-sm text-accent">Responsive</span></div></div>
+            <div class="observe-anim anim-slide-left delay-4 glow-border rounded-sm p-6"><div class="flex items-center gap-3 mb-5"><i data-lucide="trending-up" class="w-6 h-6 text-accent"></i><h3 class="font-display text-xl font-semibold text-text">Currently Working On</h3></div><ul class="space-y-3"><li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span><span class="text-sm text-textdim">Improving React skills</span></li><li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span><span class="text-sm text-textdim">Building real-world projects</span></li><li class="flex items-start gap-3"><span class="text-accent font-bold mt-1">→</span><span class="text-sm text-textdim">Strengthening problem-solving</span></li></ul></div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT SECTION (Netlify Form) -->
-      <section
-        id="contact"
-        class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid"
-      >
+      <!-- CONTACT SECTION (unchanged) -->
+      <section id="contact" class="relative w-full bg-darkcard py-24 md:py-32 pattern-grid">
         <div class="max-w-4xl mx-auto px-6">
-          <div class="text-center mb-16">
-            <p
-              class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3"
-            >
-              &gt; let's.connect()
-            </p>
-            <h2
-              class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4"
-            >
-              Let's Work Together
-            </h2>
-            <p
-              class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto"
-            >
-              I'm open to remote jobs, internships, and freelance projects. If
-              you need a dedicated developer, let's connect!
-            </p>
-          </div>
+          <div class="text-center mb-16"><p class="observe-anim anim-fade-up text-xs font-code tracking-widest text-accent mb-3">&gt; let's.connect()</p><h2 class="observe-anim anim-fade-up delay-1 font-display text-4xl md:text-5xl font-bold text-text mb-4">Let's Work Together</h2><p class="observe-anim anim-fade-up delay-3 text-base text-textdim max-w-lg mx-auto">I'm open to remote jobs, internships, and freelance projects. If you need a dedicated developer, let's connect!</p></div>
           <div class="grid md:grid-cols-2 gap-12">
             <div class="observe-anim anim-fade-up delay-3 space-y-6">
-              <div class="flex items-start gap-4 glow-border rounded-sm p-4">
-                <i
-                  data-lucide="mail"
-                  class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
-                ></i>
-                <div>
-                  <p class="text-xs font-code tracking-wider text-accent mb-1">
-                    EMAIL
-                  </p>
-                  <a
-                    href="mailto:ivieagho29@gmail.com"
-                    class="text-sm text-text font-code hover:text-accent transition-colors"
-                    >ivieagho29@gmail.com</a
-                  >
-                </div>
-              </div>
-              <div class="flex items-start gap-4 glow-border rounded-sm p-4">
-                <i
-                  data-lucide="linkedin"
-                  class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
-                ></i>
-                <div>
-                  <p class="text-xs font-code tracking-wider text-accent mb-1">
-                    LINKEDIN
-                  </p>
-                  <a
-                    href="https://linkedin.com/in/agho-ivie-176bbb262"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-text font-code hover:text-accent transition-colors"
-                    >linkedin.com/in/agho-ivie-176bbb262</a
-                  >
-                </div>
-              </div>
-              <div class="flex items-start gap-4 glow-border rounded-sm p-4">
-                <i
-                  data-lucide="github"
-                  class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
-                ></i>
-                <div>
-                  <p class="text-xs font-code tracking-wider text-accent mb-1">
-                    GITHUB
-                  </p>
-                  <a
-                    href="https://github.com/Gracey-a"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-text font-code hover:text-accent transition-colors"
-                    >github.com/Gracey-a</a
-                  >
-                </div>
-              </div>
-              <div class="pt-4">
-                <p class="text-xs font-code tracking-wider text-accent mb-3">
-                  OPEN TO
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border"
-                    >Remote Jobs</span
-                  >
-                  <span
-                    class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border"
-                    >Internships</span
-                  >
-                  <span
-                    class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border"
-                    >Freelance</span
-                  >
-                </div>
-              </div>
+              <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="mail" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">EMAIL</p><a href="mailto:ivieagho29@gmail.com" class="text-sm text-text font-code hover:text-accent transition-colors">ivieagho29@gmail.com</a></div></div>
+              <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="linkedin" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">LINKEDIN</p><a href="https://linkedin.com/in/agho-ivie-176bbb262" target="_blank" rel="noopener noreferrer" class="text-sm text-text font-code hover:text-accent transition-colors">linkedin.com/in/agho-ivie-176bbb262</a></div></div>
+              <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="github" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">GITHUB</p><a href="https://github.com/Gracey-a" target="_blank" rel="noopener noreferrer" class="text-sm text-text font-code hover:text-accent transition-colors">github.com/Gracey-a</a></div></div>
+              <div class="pt-4"><p class="text-xs font-code tracking-wider text-accent mb-3">OPEN TO</p><div class="flex flex-wrap gap-2"><span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Remote Jobs</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Internships</span><span class="text-[11px] font-code tracking-wider uppercase bg-darkbg px-4 py-2 rounded-sm text-accent code-border">Freelance</span></div></div>
             </div>
-
             <div class="observe-anim anim-fade-up delay-4">
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                action="/thank-you.html"
-                class="space-y-4"
-              >
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="space-y-4">
                 <input type="hidden" name="form-name" value="contact" />
-                <p class="hidden">
-                  <label
-                    >Don't fill this out if you're human:
-                    <input name="bot-field"
-                  /></label>
-                </p>
-                <div>
-                  <label
-                    for="name"
-                    class="block text-xs font-code tracking-wider text-accent mb-2"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="email"
-                    class="block text-xs font-code tracking-wider text-accent mb-2"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="message"
-                    class="block text-xs font-code tracking-wider text-accent mb-2"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 resize-none rounded-sm"
-                    placeholder="Tell me about your project..."
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full btn-primary text-white px-6 py-3.5 text-xs font-medium tracking-wider uppercase rounded-sm flex items-center justify-center gap-2"
-                >
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                  <span>Send Message</span>
-                </button>
+                <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+                <div><label for="name" class="block text-xs font-code tracking-wider text-accent mb-2">Name</label><input type="text" id="name" name="name" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm" placeholder="Your name" required /></div>
+                <div><label for="email" class="block text-xs font-code tracking-wider text-accent mb-2">Email</label><input type="email" id="email" name="email" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 rounded-sm" placeholder="your@email.com" required /></div>
+                <div><label for="message" class="block text-xs font-code tracking-wider text-accent mb-2">Message</label><textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-3 text-sm outline-none transition-all duration-300 resize-none rounded-sm" placeholder="Tell me about your project..." required></textarea></div>
+                <button type="submit" class="w-full btn-primary text-white px-6 py-3.5 text-xs font-medium tracking-wider uppercase rounded-sm flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i><span>Send Message</span></button>
               </form>
             </div>
           </div>
-          <div class="observe-anim anim-fade-up delay-5 text-center mt-16">
-            <p class="font-display italic text-lg text-textdim">
-              I look forward to hearing from you!
-            </p>
-          </div>
+          <div class="observe-anim anim-fade-up delay-5 text-center mt-16"><p class="font-display italic text-lg text-textdim">I look forward to hearing from you!</p></div>
         </div>
       </section>
 
-      <!-- FOOTER -->
+      <!-- FOOTER with dynamic year -->
       <footer class="w-full bg-darkcard py-10 border-t border-accentalt/20">
         <div class="max-w-5xl mx-auto px-6 text-center">
-          <p
-            class="font-display text-2xl font-bold text-accent mb-2 anim-glow"
-            id="nav-brand-footer"
-          >
-            &lt;A.I.G /&gt;
-          </p>
-          <p
-            id="footer-tagline"
-            class="font-code italic text-sm text-textdim mb-6"
-          >
-            "Driven by passion, powered by growth."
-          </p>
-          <p class="text-xs text-textdim tracking-wider font-code">
-            © 2026 Agho Ivie Gracious. All rights reserved.
-          </p>
+          <p class="font-display text-2xl font-bold text-accent mb-2 anim-glow" id="nav-brand-footer">&lt;A.I.G /&gt;</p>
+          <p id="footer-tagline" class="font-code italic text-sm text-textdim mb-6">"Driven by passion, powered by growth."</p>
+          <p class="text-xs text-textdim tracking-wider font-code">© <span id="current-year"></span> Agho Ivie Gracious. All rights reserved.</p>
         </div>
       </footer>
     </div>
-
     <script>
+      // Dynamic copyright year
+      document.getElementById('current-year').innerText = new Date().getFullYear();
+
       // Intersection Observer for scroll animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
-      );
-      document
-        .querySelectorAll(".observe-anim")
-        .forEach((el) => observer.observe(el));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+      document.querySelectorAll(".observe-anim").forEach(el => observer.observe(el));
 
       // Mobile menu toggle
       const mobileToggle = document.getElementById("mobile-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
       let menuOpen = false;
-      mobileToggle.addEventListener("click", () => {
-        menuOpen = !menuOpen;
-        mobileMenu.classList.toggle("hidden", !menuOpen);
-      });
-      mobileMenu.querySelectorAll("a").forEach((a) => {
-        a.addEventListener("click", () => {
-          menuOpen = false;
-          mobileMenu.classList.add("hidden");
-        });
-      });
+      mobileToggle.addEventListener("click", () => { menuOpen = !menuOpen; mobileMenu.classList.toggle("hidden", !menuOpen); });
+      mobileMenu.querySelectorAll("a").forEach(a => { a.addEventListener("click", () => { menuOpen = false; mobileMenu.classList.add("hidden"); }); });
 
       // Active nav link on scroll
       const sections = document.querySelectorAll("section[id]");
@@ -1259,16 +413,8 @@
       const appWrapper = document.getElementById("app-wrapper");
       appWrapper.addEventListener("scroll", () => {
         let current = "";
-        sections.forEach((section) => {
-          if (appWrapper.scrollTop >= section.offsetTop - 100)
-            current = section.getAttribute("id");
-        });
-        navLinks.forEach((link) =>
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === "#" + current,
-          ),
-        );
+        sections.forEach(section => { if (appWrapper.scrollTop >= section.offsetTop - 100) current = section.getAttribute("id"); });
+        navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + current));
       });
 
       // Initialize Lucide icons
