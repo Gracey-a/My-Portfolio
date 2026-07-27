@@ -62,8 +62,16 @@
         transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
         border:1px solid #9b7ba833;
         background:linear-gradient(135deg,#1a0f1f22,#9b7ba808);
+        overflow: hidden;
       }
       .project-card:hover { transform:translateY(-10px); border-color:#9b7ba855; box-shadow:0 25px 70px #9b7ba811; background:linear-gradient(135deg,#1a0f1f44,#9b7ba816); }
+
+      /* ── Project preview mockup ── */
+      .proj-preview { margin:-32px -32px 24px -32px; border-bottom:1px solid #9b7ba822; }
+      .proj-chrome  { background:#1a0f1f; padding:7px 12px; display:flex; align-items:center; gap:5px; border-bottom:1px solid #9b7ba811; }
+      .proj-chrome .cd { width:7px;height:7px;border-radius:50%;display:inline-block; }
+      .proj-chrome .url { flex:1;background:#0a0608;height:13px;border-radius:3px;margin-left:8px;display:flex;align-items:center;padding:0 8px;overflow:hidden; }
+      .proj-chrome .url span { font-family:'JetBrains Mono',monospace;font-size:9px;color:#9b7ba866;white-space:nowrap; }
 
       .skill-tag { transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1); border:1.5px solid #9b7ba855; background:linear-gradient(135deg,#1a0f1f11,#9b7ba808); }
       .skill-tag:hover { background:linear-gradient(135deg,#9b7ba822,#9b7ba816); border-color:#9b7ba8; box-shadow:0 0 15px #9b7ba822; transform:translateY(-4px) scale(1.05); }
@@ -235,6 +243,40 @@
 
           <!-- 1: Coffee Shop -->
           <div class="project-card rounded-sm p-8">
+            <!-- Preview: Coffee Shop -->
+            <div class="proj-preview">
+              <div class="proj-chrome">
+                <span class="cd" style="background:#ff5f5780;"></span>
+                <span class="cd" style="background:#febc2e80;"></span>
+                <span class="cd" style="background:#28c84080;"></span>
+                <div class="url"><span>gracey-a.github.io/coffee-shop-website</span></div>
+              </div>
+              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="400" height="118" fill="#0d0a14"/>
+                <!-- nav -->
+                <rect width="400" height="20" fill="#1a0f1f"/>
+                <rect x="12" y="6" width="28" height="8" rx="2" fill="#9b7ba8" opacity="0.7"/>
+                <rect x="270" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
+                <rect x="298" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
+                <rect x="326" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
+                <rect x="356" y="5" width="32" height="10" rx="2" fill="#9b7ba8" opacity="0.5"/>
+                <!-- hero left -->
+                <rect x="0" y="20" width="230" height="98" fill="#140d1a"/>
+                <rect x="18" y="34" width="130" height="12" rx="2" fill="#d4c5e2" opacity="0.6"/>
+                <rect x="18" y="52" width="95" height="7" rx="2" fill="#a892b8" opacity="0.4"/>
+                <rect x="18" y="64" width="80" height="7" rx="2" fill="#a892b8" opacity="0.3"/>
+                <rect x="18" y="80" width="75" height="20" rx="3" fill="#9b7ba8" opacity="0.75"/>
+                <rect x="100" y="80" width="75" height="20" rx="3" fill="none" stroke="#9b7ba8" stroke-opacity="0.4" stroke-width="1"/>
+                <!-- hero right - coffee cup -->
+                <rect x="230" y="20" width="170" height="98" fill="#1a0f1f"/>
+                <circle cx="315" cy="72" r="36" fill="#2a1828" opacity="0.7"/>
+                <ellipse cx="315" cy="55" rx="20" ry="7" fill="#9b7ba822"/>
+                <rect x="296" y="55" width="38" height="32" rx="4" fill="#3d1f3d" opacity="0.9"/>
+                <rect x="334" y="62" width="10" height="16" rx="5" fill="none" stroke="#9b7ba8" stroke-opacity="0.4" stroke-width="2"/>
+                <ellipse cx="315" cy="88" rx="25" ry="5" fill="#9b7ba822"/>
+                <ellipse cx="315" cy="55" rx="13" ry="5" fill="#9b7ba833"/>
+              </svg>
+            </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">☕</span><h3 class="font-display text-xl font-semibold text-text">Hivey's Brew</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Coffee Shop Website</p>
             <!-- metric bar -->
@@ -254,6 +296,55 @@
 
           <!-- 2: TaskForce -->
           <div class="project-card rounded-sm p-8">
+            <!-- Preview: TaskForce Kanban -->
+            <div class="proj-preview">
+              <div class="proj-chrome">
+                <span class="cd" style="background:#ff5f5780;"></span>
+                <span class="cd" style="background:#febc2e80;"></span>
+                <span class="cd" style="background:#28c84080;"></span>
+                <div class="url"><span>gracey-a.github.io/Task-manager</span></div>
+              </div>
+              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="400" height="118" fill="#0a0810"/>
+                <!-- sidebar -->
+                <rect width="65" height="118" fill="#120d1a"/>
+                <rect x="10" y="14" width="45" height="7" rx="2" fill="#9b7ba8" opacity="0.6"/>
+                <rect x="10" y="28" width="38" height="5" rx="1" fill="#9b7ba8" opacity="0.5"/>
+                <rect x="10" y="40" width="42" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="10" y="52" width="35" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="10" y="64" width="40" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="10" y="76" width="36" height="5" rx="1" fill="#a892b8" opacity="0.25"/>
+                <!-- kanban header -->
+                <rect x="65" y="0" width="335" height="20" fill="#0f0c18"/>
+                <rect x="75" y="6" width="50" height="8" rx="2" fill="#9b7ba8" opacity="0.5"/>
+                <rect x="353" y="5" width="36" height="10" rx="2" fill="#9b7ba8" opacity="0.4"/>
+                <!-- col 1: To Do -->
+                <rect x="73" y="26" width="95" height="13" rx="2" fill="#1a1228" opacity="0.9"/>
+                <rect x="79" y="30" width="38" height="5" rx="1" fill="#a892b8" opacity="0.5"/>
+                <rect x="73" y="44" width="95" height="28" rx="2" fill="#1a0f1f"/>
+                <rect x="79" y="50" width="60" height="5" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="79" y="60" width="45" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="73" y="76" width="95" height="28" rx="2" fill="#1a0f1f"/>
+                <rect x="79" y="82" width="50" height="5" rx="1" fill="#d4c5e2" opacity="0.45"/>
+                <rect x="79" y="92" width="38" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
+                <!-- col 2: In Progress (accent highlight) -->
+                <rect x="176" y="26" width="95" height="13" rx="2" fill="#9b7ba822"/>
+                <rect x="182" y="30" width="55" height="5" rx="1" fill="#9b7ba8" opacity="0.7"/>
+                <rect x="176" y="44" width="95" height="28" rx="2" fill="#1a0f1f"/>
+                <rect x="178" y="44" width="3" height="28" rx="1" fill="#9b7ba8" opacity="0.7"/>
+                <rect x="184" y="50" width="65" height="5" rx="1" fill="#d4c5e2" opacity="0.55"/>
+                <rect x="184" y="60" width="48" height="4" rx="1" fill="#9b7ba8" opacity="0.4"/>
+                <rect x="176" y="76" width="95" height="28" rx="2" fill="#1a0f1f"/>
+                <rect x="178" y="76" width="3" height="28" rx="1" fill="#9b7ba8" opacity="0.5"/>
+                <rect x="184" y="82" width="55" height="5" rx="1" fill="#d4c5e2" opacity="0.45"/>
+                <!-- col 3: Done -->
+                <rect x="279" y="26" width="95" height="13" rx="2" fill="#1a1228" opacity="0.9"/>
+                <rect x="285" y="30" width="30" height="5" rx="1" fill="#a892b8" opacity="0.4"/>
+                <rect x="279" y="44" width="95" height="28" rx="2" fill="#1a0f1f" opacity="0.6"/>
+                <rect x="285" y="50" width="48" height="5" rx="1" fill="#d4c5e2" opacity="0.3"/>
+                <rect x="285" y="60" width="35" height="4" rx="1" fill="#a892b8" opacity="0.2"/>
+              </svg>
+            </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">🗓️</span><h3 class="font-display text-xl font-semibold text-text">TaskForce</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Task Manager PWA</p>
             <div class="metric-bar"><span class="metric-dot"></span><span class="text-[11px] font-code text-accent">Offline-capable · Real-time sync · 6+ productivity features</span></div>
@@ -274,6 +365,52 @@
 
           <!-- 3: AURA -->
           <div class="project-card rounded-sm p-8">
+            <!-- Preview: AURA E-Commerce -->
+            <div class="proj-preview">
+              <div class="proj-chrome">
+                <span class="cd" style="background:#ff5f5780;"></span>
+                <span class="cd" style="background:#febc2e80;"></span>
+                <span class="cd" style="background:#28c84080;"></span>
+                <div class="url"><span>aura-store · demo available on request</span></div>
+              </div>
+              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="400" height="118" fill="#0d0a14"/>
+                <!-- nav -->
+                <rect width="400" height="22" fill="#1a0f1f"/>
+                <rect x="10" y="7" width="40" height="8" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="155" y="7" width="90" height="8" rx="2" fill="#9b7ba8" opacity="0.65"/>
+                <rect x="355" y="8" width="18" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="375" y="8" width="18" height="6" rx="1" fill="#9b7ba8" opacity="0.5"/>
+                <!-- category pills -->
+                <rect x="10" y="28" width="45" height="10" rx="5" fill="#9b7ba8" opacity="0.6"/>
+                <rect x="62" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
+                <rect x="114" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
+                <rect x="166" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
+                <!-- product grid -->
+                <rect x="10" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
+                <rect x="10" y="44" width="85" height="46" rx="3" fill="#2a1828" opacity="0.85"/>
+                <rect x="14" y="96" width="55" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="14" y="106" width="35" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
+
+                <rect x="105" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
+                <rect x="105" y="44" width="85" height="46" rx="3" fill="#3d1f3d" opacity="0.7"/>
+                <rect x="109" y="96" width="48" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="109" y="106" width="38" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
+                <!-- wishlist heart on hovered card -->
+                <circle cx="181" cy="54" r="8" fill="#1a0f1f" opacity="0.7"/>
+                <path d="M181 58 C179 56 176 53 178 51 C179 49 181 50 181 52 C181 50 183 49 184 51 C186 53 183 56 181 58Z" fill="#9b7ba8" opacity="0.8"/>
+
+                <rect x="200" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
+                <rect x="200" y="44" width="85" height="46" rx="3" fill="#1f1535" opacity="0.9"/>
+                <rect x="204" y="96" width="58" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="204" y="106" width="40" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
+
+                <rect x="295" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
+                <rect x="295" y="44" width="85" height="46" rx="3" fill="#2a1520" opacity="0.9"/>
+                <rect x="299" y="96" width="45" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="299" y="106" width="30" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
+              </svg>
+            </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">🛍️</span><h3 class="font-display text-xl font-semibold text-text">AURA – E-Commerce</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-textdim/10 border border-textdim/20 text-textdim">Private</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Full-Stack Fashion Store · Django</p>
             <div class="metric-bar"><span class="metric-dot"></span><span class="text-[11px] font-code text-accent">7 integrated systems · Paystack webhooks · Full order lifecycle</span></div>
@@ -300,6 +437,45 @@
 
           <!-- 4: Django Blog -->
           <div class="project-card rounded-sm p-8">
+            <!-- Preview: Django Blog magazine layout -->
+            <div class="proj-preview">
+              <div class="proj-chrome">
+                <span class="cd" style="background:#ff5f5780;"></span>
+                <span class="cd" style="background:#febc2e80;"></span>
+                <span class="cd" style="background:#28c84080;"></span>
+                <div class="url"><span>django-blog-52oj.onrender.com</span></div>
+              </div>
+              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="400" height="118" fill="#0d0a14"/>
+                <!-- nav -->
+                <rect width="400" height="20" fill="#1a0f1f"/>
+                <rect x="150" y="6" width="100" height="8" rx="2" fill="#9b7ba8" opacity="0.6"/>
+                <rect x="10" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="52" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="94" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="355" y="6" width="35" height="8" rx="2" fill="#9b7ba8" opacity="0.4"/>
+                <!-- featured article (left, wide) -->
+                <rect x="10" y="26" width="235" height="86" rx="3" fill="#1a0f1f"/>
+                <rect x="10" y="26" width="235" height="52" rx="3" fill="#2a1828" opacity="0.75"/>
+                <!-- category tag on image -->
+                <rect x="18" y="32" width="42" height="10" rx="2" fill="#9b7ba8" opacity="0.55"/>
+                <rect x="18" y="82" width="140" height="9" rx="2" fill="#d4c5e2" opacity="0.6"/>
+                <rect x="18" y="96" width="95" height="5" rx="1" fill="#a892b8" opacity="0.35"/>
+                <rect x="18" y="106" width="70" height="5" rx="1" fill="#a892b8" opacity="0.25"/>
+                <!-- right column: 2 smaller articles -->
+                <rect x="255" y="26" width="135" height="40" rx="3" fill="#1a0f1f"/>
+                <rect x="255" y="26" width="55" height="40" rx="2" fill="#3d1f3d" opacity="0.7"/>
+                <rect x="316" y="31" width="66" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="316" y="42" width="50" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="316" y="51" width="40" height="4" rx="1" fill="#a892b8" opacity="0.25"/>
+
+                <rect x="255" y="72" width="135" height="40" rx="3" fill="#1a0f1f"/>
+                <rect x="255" y="72" width="55" height="40" rx="2" fill="#1f1535" opacity="0.85"/>
+                <rect x="316" y="77" width="60" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
+                <rect x="316" y="88" width="48" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
+                <rect x="316" y="97" width="36" height="4" rx="1" fill="#a892b8" opacity="0.25"/>
+              </svg>
+            </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">📝</span><h3 class="font-display text-xl font-semibold text-text">Elegant Django Blog</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Blog Platform · Django</p>
             <div class="metric-bar"><span class="metric-dot"></span><span class="text-[11px] font-code text-accent">10+ CMS features · Deployed on Render · Dark &amp; light mode</span></div>
@@ -590,13 +766,15 @@
     const titles = [
       "Full-Stack Developer",
       "Django Back-End Dev",
-      "Frontend Developer",
+      "Frontend Engineer",
       "Creative Thinker",
       "Problem Solver",
       "Remote-Ready Dev",
     ];
     const typedEl  = document.getElementById("typed-text");
-    let ti = 0, ci = 0, deleting = false;
+    let ti = 0, ci = 1, deleting = false;
+    // Pre-populate first character so the span is never blank on load
+    if (typedEl) typedEl.textContent = titles[0][0];
 
     function typeLoop() {
       if (!typedEl) return;
