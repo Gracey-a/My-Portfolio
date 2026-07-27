@@ -101,11 +101,11 @@
       /* ── Grid pattern ── */
       .pattern-grid { background-image:linear-gradient(#9b7ba80a 1px,transparent 1px),linear-gradient(90deg,#9b7ba80a 1px,transparent 1px); background-size:50px 50px; }
 
-      /* ── Metric bar (NEW) ── */
+      /* ── Metric bar ── */
       .metric-bar { display:flex; align-items:center; gap:8px; padding:8px 14px; background:#1a0f1f55; border:1px solid #9b7ba833; border-radius:4px; margin-bottom:14px; }
       .metric-dot  { width:5px; height:5px; border-radius:50%; background:#9b7ba8; flex-shrink:0; }
 
-      /* ── GitHub stat card (NEW) ── */
+      /* ── GitHub stat card ── */
       .gh-card { background:#12090f; border:1px solid #9b7ba833; border-radius:4px; overflow:hidden; transition:border-color .3s; }
       .gh-card:hover { border-color:#9b7ba855; }
 
@@ -151,7 +151,6 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
 
           <div class="order-2 md:order-1 z-10">
-            <!-- timezone + status (NEW) -->
             <div class="flex flex-wrap items-center gap-3 mb-6">
               <span class="inline-flex items-center gap-2 text-[11px] font-code tracking-widest text-accent border border-accent/30 px-3 py-1.5 rounded-sm bg-accent/5">
                 <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block"></span>
@@ -202,7 +201,7 @@
 
           <div class="md:col-span-1 flex flex-col items-center md:items-start">
             <div class="about-image-placeholder flex items-center justify-center overflow-hidden rounded-full mb-6">
-              <img src="About.webp" alt="Agho Ivie Gracious" class="w-full h-full object-cover" style="transform:scale(1.1)" />
+              <img src="About.webp" alt="Agho Ivie Gracious face" class="w-full h-full object-cover" style="transform:scale(1.1)" />
             </div>
             <p class="text-xs font-code tracking-widest text-accent mb-2">&lt;/about&gt;</p>
             <h2 class="font-display text-4xl md:text-5xl font-bold text-text leading-tight">About Me</h2>
@@ -243,7 +242,6 @@
 
           <!-- 1: Coffee Shop -->
           <div class="project-card rounded-sm p-8">
-            <!-- Preview: Coffee Shop -->
             <div class="proj-preview">
               <div class="proj-chrome">
                 <span class="cd" style="background:#ff5f5780;"></span>
@@ -251,35 +249,10 @@
                 <span class="cd" style="background:#28c84080;"></span>
                 <div class="url"><span>gracey-a.github.io/coffee-shop-website</span></div>
               </div>
-              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-                <rect width="400" height="118" fill="#0d0a14"/>
-                <!-- nav -->
-                <rect width="400" height="20" fill="#1a0f1f"/>
-                <rect x="12" y="6" width="28" height="8" rx="2" fill="#9b7ba8" opacity="0.7"/>
-                <rect x="270" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
-                <rect x="298" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
-                <rect x="326" y="7" width="22" height="6" rx="1" fill="#a892b8" opacity="0.35"/>
-                <rect x="356" y="5" width="32" height="10" rx="2" fill="#9b7ba8" opacity="0.5"/>
-                <!-- hero left -->
-                <rect x="0" y="20" width="230" height="98" fill="#140d1a"/>
-                <rect x="18" y="34" width="130" height="12" rx="2" fill="#d4c5e2" opacity="0.6"/>
-                <rect x="18" y="52" width="95" height="7" rx="2" fill="#a892b8" opacity="0.4"/>
-                <rect x="18" y="64" width="80" height="7" rx="2" fill="#a892b8" opacity="0.3"/>
-                <rect x="18" y="80" width="75" height="20" rx="3" fill="#9b7ba8" opacity="0.75"/>
-                <rect x="100" y="80" width="75" height="20" rx="3" fill="none" stroke="#9b7ba8" stroke-opacity="0.4" stroke-width="1"/>
-                <!-- hero right - coffee cup -->
-                <rect x="230" y="20" width="170" height="98" fill="#1a0f1f"/>
-                <circle cx="315" cy="72" r="36" fill="#2a1828" opacity="0.7"/>
-                <ellipse cx="315" cy="55" rx="20" ry="7" fill="#9b7ba822"/>
-                <rect x="296" y="55" width="38" height="32" rx="4" fill="#3d1f3d" opacity="0.9"/>
-                <rect x="334" y="62" width="10" height="16" rx="5" fill="none" stroke="#9b7ba8" stroke-opacity="0.4" stroke-width="2"/>
-                <ellipse cx="315" cy="88" rx="25" ry="5" fill="#9b7ba822"/>
-                <ellipse cx="315" cy="55" rx="13" ry="5" fill="#9b7ba833"/>
-              </svg>
+              <img src="coffee-preview.webp" alt="Hivey's Brew Coffee Shop preview" style="width:100%;display:block;" />
             </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">☕</span><h3 class="font-display text-xl font-semibold text-text">Hivey's Brew</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Coffee Shop Website</p>
-            <!-- metric bar -->
             <div class="metric-bar"><span class="metric-dot"></span><span class="text-[11px] font-code text-accent">Fully responsive · 4 core pages · &lt;2s load time</span></div>
             <p class="text-sm text-textdim leading-relaxed mb-2"><span class="text-text font-medium">Challenge:</span> Build a complete business web presence with ordering using no frameworks.</p>
             <p class="text-sm text-textdim leading-relaxed mb-5"><span class="text-text font-medium">Outcome:</span> Delivered a cart system, events page, blog & gallery — pure HTML, CSS & JavaScript.</p>
@@ -296,7 +269,6 @@
 
           <!-- 2: TaskForce -->
           <div class="project-card rounded-sm p-8">
-            <!-- Preview: TaskForce Kanban -->
             <div class="proj-preview">
               <div class="proj-chrome">
                 <span class="cd" style="background:#ff5f5780;"></span>
@@ -304,46 +276,7 @@
                 <span class="cd" style="background:#28c84080;"></span>
                 <div class="url"><span>gracey-a.github.io/Task-manager</span></div>
               </div>
-              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-                <rect width="400" height="118" fill="#0a0810"/>
-                <!-- sidebar -->
-                <rect width="65" height="118" fill="#120d1a"/>
-                <rect x="10" y="14" width="45" height="7" rx="2" fill="#9b7ba8" opacity="0.6"/>
-                <rect x="10" y="28" width="38" height="5" rx="1" fill="#9b7ba8" opacity="0.5"/>
-                <rect x="10" y="40" width="42" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="10" y="52" width="35" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="10" y="64" width="40" height="5" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="10" y="76" width="36" height="5" rx="1" fill="#a892b8" opacity="0.25"/>
-                <!-- kanban header -->
-                <rect x="65" y="0" width="335" height="20" fill="#0f0c18"/>
-                <rect x="75" y="6" width="50" height="8" rx="2" fill="#9b7ba8" opacity="0.5"/>
-                <rect x="353" y="5" width="36" height="10" rx="2" fill="#9b7ba8" opacity="0.4"/>
-                <!-- col 1: To Do -->
-                <rect x="73" y="26" width="95" height="13" rx="2" fill="#1a1228" opacity="0.9"/>
-                <rect x="79" y="30" width="38" height="5" rx="1" fill="#a892b8" opacity="0.5"/>
-                <rect x="73" y="44" width="95" height="28" rx="2" fill="#1a0f1f"/>
-                <rect x="79" y="50" width="60" height="5" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="79" y="60" width="45" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="73" y="76" width="95" height="28" rx="2" fill="#1a0f1f"/>
-                <rect x="79" y="82" width="50" height="5" rx="1" fill="#d4c5e2" opacity="0.45"/>
-                <rect x="79" y="92" width="38" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
-                <!-- col 2: In Progress (accent highlight) -->
-                <rect x="176" y="26" width="95" height="13" rx="2" fill="#9b7ba822"/>
-                <rect x="182" y="30" width="55" height="5" rx="1" fill="#9b7ba8" opacity="0.7"/>
-                <rect x="176" y="44" width="95" height="28" rx="2" fill="#1a0f1f"/>
-                <rect x="178" y="44" width="3" height="28" rx="1" fill="#9b7ba8" opacity="0.7"/>
-                <rect x="184" y="50" width="65" height="5" rx="1" fill="#d4c5e2" opacity="0.55"/>
-                <rect x="184" y="60" width="48" height="4" rx="1" fill="#9b7ba8" opacity="0.4"/>
-                <rect x="176" y="76" width="95" height="28" rx="2" fill="#1a0f1f"/>
-                <rect x="178" y="76" width="3" height="28" rx="1" fill="#9b7ba8" opacity="0.5"/>
-                <rect x="184" y="82" width="55" height="5" rx="1" fill="#d4c5e2" opacity="0.45"/>
-                <!-- col 3: Done -->
-                <rect x="279" y="26" width="95" height="13" rx="2" fill="#1a1228" opacity="0.9"/>
-                <rect x="285" y="30" width="30" height="5" rx="1" fill="#a892b8" opacity="0.4"/>
-                <rect x="279" y="44" width="95" height="28" rx="2" fill="#1a0f1f" opacity="0.6"/>
-                <rect x="285" y="50" width="48" height="5" rx="1" fill="#d4c5e2" opacity="0.3"/>
-                <rect x="285" y="60" width="35" height="4" rx="1" fill="#a892b8" opacity="0.2"/>
-              </svg>
+              <img src="taskforce-preview.webp" alt="TaskForce task manager preview" style="width:100%;display:block;" />
             </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">🗓️</span><h3 class="font-display text-xl font-semibold text-text">TaskForce</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Task Manager PWA</p>
@@ -365,58 +298,20 @@
 
           <!-- 3: AURA -->
           <div class="project-card rounded-sm p-8">
-            <!-- Preview: AURA E-Commerce -->
             <div class="proj-preview">
               <div class="proj-chrome">
                 <span class="cd" style="background:#ff5f5780;"></span>
                 <span class="cd" style="background:#febc2e80;"></span>
                 <span class="cd" style="background:#28c84080;"></span>
-                <div class="url"><span>aura-store · demo available on request</span></div>
+                <div class="url"><span>aura-nffv.onrender.com</span></div>
               </div>
-              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-                <rect width="400" height="118" fill="#0d0a14"/>
-                <!-- nav -->
-                <rect width="400" height="22" fill="#1a0f1f"/>
-                <rect x="10" y="7" width="40" height="8" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="155" y="7" width="90" height="8" rx="2" fill="#9b7ba8" opacity="0.65"/>
-                <rect x="355" y="8" width="18" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="375" y="8" width="18" height="6" rx="1" fill="#9b7ba8" opacity="0.5"/>
-                <!-- category pills -->
-                <rect x="10" y="28" width="45" height="10" rx="5" fill="#9b7ba8" opacity="0.6"/>
-                <rect x="62" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
-                <rect x="114" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
-                <rect x="166" y="28" width="45" height="10" rx="5" fill="#1a0f1f" stroke="#9b7ba833" stroke-width="1"/>
-                <!-- product grid -->
-                <rect x="10" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
-                <rect x="10" y="44" width="85" height="46" rx="3" fill="#2a1828" opacity="0.85"/>
-                <rect x="14" y="96" width="55" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="14" y="106" width="35" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
-
-                <rect x="105" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
-                <rect x="105" y="44" width="85" height="46" rx="3" fill="#3d1f3d" opacity="0.7"/>
-                <rect x="109" y="96" width="48" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="109" y="106" width="38" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
-                <!-- wishlist heart on hovered card -->
-                <circle cx="181" cy="54" r="8" fill="#1a0f1f" opacity="0.7"/>
-                <path d="M181 58 C179 56 176 53 178 51 C179 49 181 50 181 52 C181 50 183 49 184 51 C186 53 183 56 181 58Z" fill="#9b7ba8" opacity="0.8"/>
-
-                <rect x="200" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
-                <rect x="200" y="44" width="85" height="46" rx="3" fill="#1f1535" opacity="0.9"/>
-                <rect x="204" y="96" width="58" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="204" y="106" width="40" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
-
-                <rect x="295" y="44" width="85" height="68" rx="3" fill="#1a0f1f"/>
-                <rect x="295" y="44" width="85" height="46" rx="3" fill="#2a1520" opacity="0.9"/>
-                <rect x="299" y="96" width="45" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="299" y="106" width="30" height="5" rx="1" fill="#9b7ba8" opacity="0.65"/>
-              </svg>
+              <img src="aura-preview.webp" alt="AURA e-commerce preview" style="width:100%;display:block;" />
             </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">🛍️</span><h3 class="font-display text-xl font-semibold text-text">AURA – E-Commerce</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-textdim/10 border border-textdim/20 text-textdim">Private</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Full-Stack Fashion Store · Django</p>
             <div class="metric-bar"><span class="metric-dot"></span><span class="text-[11px] font-code text-accent">7 integrated systems · Paystack webhooks · Full order lifecycle</span></div>
             <p class="text-sm text-textdim leading-relaxed mb-2"><span class="text-text font-medium">Challenge:</span> Build a production e-commerce store with reliable payments and a complete post-purchase flow.</p>
             <p class="text-sm text-textdim leading-relaxed mb-4"><span class="text-text font-medium">Outcome:</span> Shipped full Django stack — Paystack webhook verification, async emails via Celery + Redis, PDF invoice generation, product variants with stock, and admin dashboard with sales analytics.</p>
-            <!-- demo request (NEW) -->
             <div class="flex items-center gap-2 mb-5 p-3 rounded-sm bg-accent/5 border border-accent/20">
               <i data-lucide="mail" class="w-3.5 h-3.5 text-accent flex-shrink-0"></i>
               <p class="text-xs font-code text-textdim">Live demo available on request — <a href="mailto:ivieagho29@gmail.com" class="text-accent hover:text-white transition-colors">email me</a> for access credentials.</p>
@@ -429,15 +324,22 @@
               <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Celery</span>
               <span class="text-[11px] font-code tracking-wider uppercase bg-darkcard px-3 py-1 rounded-sm text-accent border border-accent/30">Paystack API</span>
             </div>
-            <div class="flex gap-4">
-              <a href="https://youtu.be/mBht24gfOQE" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> Full Walkthrough</a>
-              <a href="https://github.com/Gracey-a/forge_clothing" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub (Private)</a>
+            <div class="flex gap-4 flex-wrap">
+              <!-- New Live Demo button for AURA -->
+              <a href="https://aura-nffv.onrender.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+              </a>
+              <a href="https://youtu.be/mBht24gfOQE" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
+                <i data-lucide="video" class="w-3.5 h-3.5"></i> Full Walkthrough
+              </a>
+              <a href="https://github.com/Gracey-a/forge_clothing" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-code tracking-wider uppercase text-accent hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub (Private)
+              </a>
             </div>
           </div>
 
           <!-- 4: Django Blog -->
           <div class="project-card rounded-sm p-8">
-            <!-- Preview: Django Blog magazine layout -->
             <div class="proj-preview">
               <div class="proj-chrome">
                 <span class="cd" style="background:#ff5f5780;"></span>
@@ -445,36 +347,7 @@
                 <span class="cd" style="background:#28c84080;"></span>
                 <div class="url"><span>django-blog-52oj.onrender.com</span></div>
               </div>
-              <svg viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-                <rect width="400" height="118" fill="#0d0a14"/>
-                <!-- nav -->
-                <rect width="400" height="20" fill="#1a0f1f"/>
-                <rect x="150" y="6" width="100" height="8" rx="2" fill="#9b7ba8" opacity="0.6"/>
-                <rect x="10" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="52" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="94" y="7" width="35" height="6" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="355" y="6" width="35" height="8" rx="2" fill="#9b7ba8" opacity="0.4"/>
-                <!-- featured article (left, wide) -->
-                <rect x="10" y="26" width="235" height="86" rx="3" fill="#1a0f1f"/>
-                <rect x="10" y="26" width="235" height="52" rx="3" fill="#2a1828" opacity="0.75"/>
-                <!-- category tag on image -->
-                <rect x="18" y="32" width="42" height="10" rx="2" fill="#9b7ba8" opacity="0.55"/>
-                <rect x="18" y="82" width="140" height="9" rx="2" fill="#d4c5e2" opacity="0.6"/>
-                <rect x="18" y="96" width="95" height="5" rx="1" fill="#a892b8" opacity="0.35"/>
-                <rect x="18" y="106" width="70" height="5" rx="1" fill="#a892b8" opacity="0.25"/>
-                <!-- right column: 2 smaller articles -->
-                <rect x="255" y="26" width="135" height="40" rx="3" fill="#1a0f1f"/>
-                <rect x="255" y="26" width="55" height="40" rx="2" fill="#3d1f3d" opacity="0.7"/>
-                <rect x="316" y="31" width="66" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="316" y="42" width="50" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="316" y="51" width="40" height="4" rx="1" fill="#a892b8" opacity="0.25"/>
-
-                <rect x="255" y="72" width="135" height="40" rx="3" fill="#1a0f1f"/>
-                <rect x="255" y="72" width="55" height="40" rx="2" fill="#1f1535" opacity="0.85"/>
-                <rect x="316" y="77" width="60" height="6" rx="1" fill="#d4c5e2" opacity="0.5"/>
-                <rect x="316" y="88" width="48" height="4" rx="1" fill="#a892b8" opacity="0.3"/>
-                <rect x="316" y="97" width="36" height="4" rx="1" fill="#a892b8" opacity="0.25"/>
-              </svg>
+              <img src="blog-preview.webp" alt="Elegant Django Blog preview" style="width:100%;display:block;" />
             </div>
             <div class="flex items-center gap-3 mb-2"><span class="text-3xl">📝</span><h3 class="font-display text-xl font-semibold text-text">Elegant Django Blog</h3><span class="ml-auto text-[10px] font-code tracking-wider uppercase px-2 py-1 rounded-sm bg-accent/10 border border-accent/25 text-accent">Live</span></div>
             <p class="text-[11px] font-code tracking-wider text-textdim mb-4">Blog Platform · Django</p>
@@ -549,7 +422,7 @@
           </div>
         </div>
 
-        <!-- GitHub Stats — custom built, no external dependency -->
+        <!-- GitHub Stats -->
         <div>
           <p class="text-xs font-code tracking-widest text-accent mb-6">&gt; github.activity()</p>
 
@@ -585,14 +458,13 @@
               </a>
             </div>
 
-            <!-- Card 2: Top languages with visual bars -->
+            <!-- Card 2: Top languages -->
             <div class="gh-card p-6">
               <div class="flex items-center gap-3 mb-5">
                 <i data-lucide="bar-chart-2" class="w-5 h-5" style="color:#9b7ba8"></i>
                 <span class="font-code text-xs tracking-wider text-accent uppercase">Most Used Languages</span>
               </div>
               <div class="space-y-4">
-                <!-- Python -->
                 <div>
                   <div class="flex justify-between items-center mb-1.5">
                     <span class="font-code text-xs text-text">Python</span>
@@ -602,7 +474,6 @@
                     <div class="h-full rounded-full" style="width:52%;background:linear-gradient(90deg,#9b7ba8,#c9a8d8);"></div>
                   </div>
                 </div>
-                <!-- JavaScript -->
                 <div>
                   <div class="flex justify-between items-center mb-1.5">
                     <span class="font-code text-xs text-text">JavaScript</span>
@@ -612,7 +483,6 @@
                     <div class="h-full rounded-full" style="width:28%;background:linear-gradient(90deg,#9b7ba8,#c9a8d8);"></div>
                   </div>
                 </div>
-                <!-- HTML -->
                 <div>
                   <div class="flex justify-between items-center mb-1.5">
                     <span class="font-code text-xs text-text">HTML</span>
@@ -622,7 +492,6 @@
                     <div class="h-full rounded-full" style="width:12%;background:linear-gradient(90deg,#9b7ba8,#c9a8d8);"></div>
                   </div>
                 </div>
-                <!-- CSS -->
                 <div>
                   <div class="flex justify-between items-center mb-1.5">
                     <span class="font-code text-xs text-text">CSS</span>
@@ -700,7 +569,6 @@
             <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="mail" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">EMAIL</p><a href="mailto:ivieagho29@gmail.com" class="text-sm text-text font-code hover:text-accent transition-colors">ivieagho29@gmail.com</a></div></div>
             <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="linkedin" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">LINKEDIN</p><a href="https://linkedin.com/in/agho-ivie-gracious" target="_blank" rel="noopener" class="text-sm text-text font-code hover:text-accent transition-colors">linkedin.com/in/agho-ivie-gracious</a></div></div>
             <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="github" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">GITHUB</p><a href="https://github.com/Gracey-a" target="_blank" rel="noopener" class="text-sm text-text font-code hover:text-accent transition-colors">github.com/Gracey-a</a></div></div>
-            <!-- timezone card (NEW) -->
             <div class="flex items-start gap-4 glow-border rounded-sm p-4"><i data-lucide="clock" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"></i><div><p class="text-xs font-code tracking-wider text-accent mb-1">TIMEZONE</p><p class="text-sm text-text font-code">Remote · GMT+1</p></div></div>
             <div class="pt-2">
               <p class="text-xs font-code tracking-wider text-accent mb-3">OPEN TO</p>
@@ -773,7 +641,6 @@
     ];
     const typedEl  = document.getElementById("typed-text");
     let ti = 0, ci = 1, deleting = false;
-    // Pre-populate first character so the span is never blank on load
     if (typedEl) typedEl.textContent = titles[0][0];
 
     function typeLoop() {
@@ -781,15 +648,12 @@
       const word = titles[ti];
 
       if (!deleting) {
-        // typing
         typedEl.textContent = word.slice(0, ++ci);
         if (ci === word.length) {
-          // pause at full word then start deleting
           setTimeout(() => { deleting = true; typeLoop(); }, 1800);
           return;
         }
       } else {
-        // deleting
         typedEl.textContent = word.slice(0, --ci);
         if (ci === 0) {
           deleting = false;
